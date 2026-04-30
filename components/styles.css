@@ -1,4 +1,19 @@
 /* MTBWA Shared Styles */
+
+:root {
+    --primary-color: #212121;
+    --secondary-color: #ffffff;
+    --background-color: #f5f2f0;
+    --text-color: #333333;
+    --highlight-color: #ffb300;
+    --link-color: #1976d2;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.7);
+    --white-transparent: rgba(255, 255, 255, 0.1);
+    --white-transparent-border: rgba(255, 255, 255, 0.1);
+    --black-transparent: rgba(0, 0, 0, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +86,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-light);
 }
 
 nav {
@@ -90,6 +105,11 @@ nav {
 }
 
 .logo-section img {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.logo-image {
     height: 40px;
     margin-right: 15px;
 }
@@ -122,11 +142,11 @@ nav {
 }
 
 .nav-menu > li > a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--white-transparent);
 }
 
 .nav-menu > li > a[aria-current="true"] {
-    border-bottom: 7px solid #ffd54f;
+    border-bottom: 7px solid var(--highlight-color);
 }
 
 /* Dropdown menu */
@@ -136,7 +156,7 @@ nav {
     left: 0;
     background-color: #4f4f4e;
     min-width: 200px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--shadow-light);
     display: none;
 }
 
@@ -153,7 +173,7 @@ nav {
 }
 
 .dropdown a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--white-transparent);
 }
 
 .nav-menu li:hover .dropdown {
@@ -170,7 +190,7 @@ nav {
     .logo-section {
         width: 100%;
         justify-content: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid var(--white-transparent-border);
     }
 
     .nav-menu {
@@ -181,13 +201,13 @@ nav {
     .nav-menu > li > a {
         padding: 15px 20px;
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid var(--white-transparent-border);
     }
 
     .dropdown {
         position: static;
         box-shadow: none;
-        background-color: rgba(0,0,0,0.1);
+        background-color: var(--black-transparent);
     }
 }
 
@@ -201,14 +221,14 @@ nav {
 .section h2 {
     color: #212121;
     font-size: 2rem;
-    border-left: 5px solid #ffd54f;
+    border-left: 5px solid var(--highlight-color);
     padding-left: 15px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?auto=format&fit=crop&q=80&w=1200');
+    background: linear-gradient(var(--shadow-medium), var(--shadow-medium)), url('https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?auto=format&fit=crop&q=80&w=1200');
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -245,7 +265,7 @@ nav {
 
 .cta-button {
     display: inline-block;
-    background: #ffd54f;
+    background: var(--highlight-color);
     color: #212121;
     padding: 15px 30px;
     text-decoration: none;
@@ -271,11 +291,16 @@ nav {
     background: #f4f4f4;
     padding: 25px;
     border-radius: 8px;
-    border-bottom: 3px solid #ffd54f;
+    border-bottom: 3px solid var(--highlight-color);
     display: flex;
     flex-direction: column;
     white-space: normal;
     box-sizing: border-box;
+}
+
+.card.feature-card {
+    border-top: 4px solid var(--highlight-color);
+    border-bottom: none;
 }
 
 .card h3 {
@@ -301,7 +326,7 @@ nav {
 .trainer-box h2,
 .trainer-box h3 {
     color: #ffffff;
-    margin-top: 0;
+    margin-top: 30px;
 }
 
 /* Certification Tags */
@@ -310,6 +335,7 @@ nav {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .cert-tag {
@@ -329,7 +355,7 @@ nav {
 }
 
 .add-scope-tag {
-    background: #ffd54f;
+    background: var(--highlight-color);
 }
 
 .add-scope-tag:hover {
@@ -337,11 +363,12 @@ nav {
 }
 
 .theory-tag {
-    background: #ffd54f;
+    background: #ffb300;
+    color: #212121;
 }
 
 .theory-tag:hover {
-    background: #ffca28;
+    background: #ff8f00;
 }
 
 /* Checklist Styles */
@@ -356,9 +383,13 @@ ul.check-list li {
 
 ul.check-list li::before {
     content: "× ";
-    color: #ffd54f;
+    color: var(--highlight-color);
     font-weight: bold;
     margin-right: 10px;
+}
+
+ul.check-list.negative-points li::before {
+    color: #d32f2f;
 }
 
 /* Mobile Responsive */
@@ -405,7 +436,7 @@ main {
     height: auto;
     border-radius: 8px;
     margin-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--shadow-light);
 }
 
 main h1 {
@@ -428,15 +459,66 @@ main h1 {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px var(--shadow-light);
     margin-bottom: 30px;
 }
 
-.content-section h2 {
+/* Global heading spacing with high specificity */
+.content-section h2,
+.section h2,
+main h2 {
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin: 5px 0 20px 0 !important;
     color: #212121;
+}
+
+.content-section h3,
+.section h3,
+main h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px 0 15px 0 !important;
+    color: #212121;
+}
+
+.content-section h4,
+.section h4,
+main h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 10px 0 !important;
+    color: #212121;
+}
+
+.content-section h5,
+.section h5,
+main h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 10px 0 !important;
+    color: #212121;
+}
+
+/* Override card heading margin */
+.card h3 {
+    margin-top: 15px !important;
+}
+
+/* Ensure trainer box headings stay white */
+.trainer-box h2,
+.trainer-box h3 {
+    color: #ffffff !important;
+    margin-top: 15px !important;
+}
+
+/* Section spacing */
+.section {
+    margin-bottom: 5px;
+}
+
+.content-section {
+    margin-bottom: 5px;
 }
 
 .content-section p {
@@ -482,7 +564,7 @@ main h1 {
 
 .trail-link {
     display: block;
-    background-color: #ffd54f;
+    background-color: var(--highlight-color);
     color: #212121;
     padding: 20px;
     text-decoration: none;
