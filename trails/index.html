@@ -6,6 +6,10 @@
     <title>Trails & Riding - MTB Western Australia</title>
     <link rel="stylesheet" href="../components/styles.css">
     <link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .trail-links {
             grid-template-columns: 1fr;
@@ -16,24 +20,73 @@
     <div id="navigation-placeholder"></div>
     <script src="../components/navigation.js"></script>
 
-    <main class="trails-main">
-        <h1>Trails & Riding Info</h1>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-image-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=1200" 
+                 alt="Mountain bike trails in Western Australia" 
+                 class="hero-bg-image">
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Discover</span>
+                    <span class="hero-title-line highlight">WA's Best</span>
+                    <span class="hero-title-line">Trails</span>
+                </h1>
+                <p class="hero-subtitle">
+                    From beginner-friendly paths to expert-level challenges, Western Australia offers incredible mountain biking experiences. Find your perfect trail, connect with fellow riders, and explore the diverse landscapes that make WA a MTB paradise.
+                </p>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
 
-        <section class="content-section">
-            <h2>Explore Western Australia's Best MTB Trails</h2>
-            <p>Where is the best place to ride in WA? How do you find trails in Perth? What time of year should you visit Western Australia? Where can you shuttle trails in WA? Are there bike parks in Western Australia? Who runs XCO, XCM, Enduro, DH races? Beginners group rides? MTB social rides? MTB Coaching in WA? How do I meet people to ride with?</p>
+    <!-- Trails Overview Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Explore Western Australia's Best MTB Trails</h2>
+                <p class="section-subtitle">Where is the best place to ride in WA? How do you find trails in Perth? What time of year should you visit Western Australia? We've got answers to all your trail questions.</p>
+            </div>
             
-            <p>Just getting started, wanting to know more, or branching out to be more involved in building our community; links below should have what you need. They cover a broad spectrum of what is going on with MTB in WA. If you have any other questions, please contact us. If you have any other info/links for something that is happening, then definitely share them with us so we can post them here for everyone.</p>
-            
-            <p>We're activiely involved with different Advisory Boards at <a href="https://westcycle.com.au/" target="_blank">WestCycle</a>, meeting with other prominent community figures and stakeholders to help them make best decisions that relate to all of us. So, we'll happily hear what you love and hate about what is going on and how things are done in WA.</p>
+            <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                <p>Just getting started, wanting to know more, or branching out to be more involved in building our community; links below should have what you need. They cover a broad spectrum of what is going on with MTB in WA. If you have any other questions, please contact us. If you have any other info/links for something that is happening, then definitely share them with us so we can post them here for everyone.</p>
+                
+                <p data-aos="fade-up" data-aos-delay="200">We're actively involved with different Advisory Boards at <a href="https://westcycle.com.au/" target="_blank">WestCycle</a>, meeting with other prominent community figures and stakeholders to help them make best decisions that relate to all of us. So, we'll happily hear what you love and hate about what is going on and how things are done in WA.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="trail-links">
+            <!-- Trail Tools Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Trail Tools & Resources</h2>
+                <p class="section-subtitle">Interactive maps, trail videos, and essential resources for planning your next ride.</p>
+            </div>
+            
+            <div class="trail-links" data-aos="fade-up" data-aos-delay="100">
                 <a href="map/" class="trail-link">Trail Map</a>
                 <a href="videos/" class="trail-link">Trail Videos</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="content-section">
+    <!-- Official Trail Information Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Official Trail Information</h2>
+                <p class="section-subtitle">The "official" trail database for Western Australia is <a href="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=cross-country&trailType%5B1%5D=downhill&trailType%5B2%5D=enduro-all-mountain" target="_blank">Trails WA</a>.</p>
+            </div>
+            
+            <div class="content-section" data-aos="fade-up" data-aos-delay="100">
             <h2>Official Trail Information</h2>
             <p>The "official" trail database for Western Australia is <a href="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=cross-country&trailType%5B1%5D=downhill&trailType%5B2%5D=enduro-all-mountain" target="_blank">Trails WA</a>.</p>
             <p>Some missing trails:
@@ -61,10 +114,71 @@
             <p>There's also Three Chillies Farm and the Golden Grove Orchard in Chittering, Evedon Lakeside Retreat in the Furguson Valley, and Echidna Park outside Geraldton that have been used for WA Gravity Enduro races. These are not typically open. Wait for races if they happen.</p>
         </section>
 
-        <section class="content-section">
-            <h2>Get Involved</h2>
-            <p>Are you interested in helping grow MTB community in WA? Check out <a href="../certification/index.html" style="color: inherit; text-decoration: underline;">MTBWA Instructor Training</a> to get certified for sharing skills of mountain biking!</p>
-        </section>
-    </main>
+        <!-- Get Involved Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Get Involved with WA Trails</h2>
+                <p class="cta-subtitle">Are you interested in helping grow MTB community in WA? Check out MTBWA Instructor Training to get certified for sharing skills of mountain biking!</p>
+                <div class="cta-buttons">
+                    <a href="../certification/" class="cta-button primary">Get Certified</a>
+                    <a href="../community/" class="cta-button secondary">Join Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo.png" alt="MTBWA Logo" class="footer-logo">
+                    <p class="footer-description">An initiative of Black Ram Labs</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="/certification">Instructor Certification</a></li>
+                            <li><a href="/trails">Trails & Riding</a></li>
+                            <li><a href="/community">Local Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/mtbwa">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/mtbwa">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@mtbwa">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Black Ram Labs Pty Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-bg-image');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
 </body>
 </html>
