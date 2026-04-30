@@ -148,6 +148,58 @@
         </div>
     </section>
 
+    <!-- Community Overview Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Connect & Ride Together</h2>
+                <p class="section-subtitle">Whether you're looking for group rides, events, or local resources, our community has something for every rider in Western Australia.</p>
+            </div>
+            
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Group Rides</h3>
+                    <p class="feature-description">Join weekly group rides for all skill levels. From beginner-friendly social rides to advanced technical sessions, find your perfect riding group.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Local Events</h3>
+                    <p class="feature-description">Stay updated on races, clinics, and community events throughout WA. From local competitions to skills workshops, never miss out.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Trail Resources</h3>
+                    <p class="feature-description">Access comprehensive trail information, local bike shops, and riding resources. Get the inside scoop on WA's best MTB destinations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Community Groups Section -->
     <section class="features-section">
         <div class="container">
@@ -329,6 +381,7 @@
                 <li><a href="https://www.speedlitecycles.com.au" target="_blank">Speedlite Cycles</a> - Maylands</li>
                 <li><a href="https://www.foothillscycles.com.au" target="_blank">Foothills Cycles</a> - Kelmscott</li>
                 <li><a href="https://www.mobikeservices.com.au" target="_blank">MoBike Services</a> - Mobile Workshop (Perth Metro)</li>
+                <li><a href="https://monkeyrockmtb.com.au" target="_blank">Monkey Rock</a> - Midvale</li>
             </ul>
             
             <h3 style="color: #212121; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">South West Region</h3>
@@ -341,5 +394,47 @@
             </ul>
             
             <h3 style="color: #212121; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Great Southern Region</h3>
-</body>
+            <ul class="community-list">
+                <li><a href="https://www.facebook.com/greatsouthernmountainbikers" target="_blank">Great Southern Mountain Bikers | Facebook</a></li>
+            </ul>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2 class="cta-title">Get Involved with WA MTB Community</h2>
+                    <p class="cta-subtitle">Are you interested in helping grow MTB community in WA? Check out MTBWA Instructor Training to get certified for sharing skills of mountain biking!</p>
+                    <div class="cta-buttons">
+                        <a href="../certification/" class="cta-button primary">Get Certified</a>
+                        <a href="../trails/" class="cta-button secondary">Explore Trails</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Component -->
+        <div id="footer-placeholder"></div>
+        <script src="../components/footer.js"></script>
+
+        <!-- Scripts -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+
+            // Parallax effect for hero background
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroBackground = document.querySelector('.hero-bg-image');
+                if (heroBackground) {
+                    heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        </script>
+    </body>
 </html>

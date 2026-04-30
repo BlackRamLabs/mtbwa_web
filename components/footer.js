@@ -1,0 +1,24 @@
+// Footer component loader
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the components path based on current page depth
+    function getComponentsPath() {
+        const path = window.location.pathname;
+        const depth = (path.match(/\//g) || []).length - 1;
+        return '../'.repeat(Math.max(0, depth - 1)) + 'components/';
+    }
+
+    // Load footer component
+    const componentsPath = getComponentsPath();
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    
+    if (footerPlaceholder) {
+        fetch(componentsPath + 'footer.html')
+            .then(response => response.text())
+            .then(html => {
+                footerPlaceholder.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer component:', error);
+            });
+    }
+});
