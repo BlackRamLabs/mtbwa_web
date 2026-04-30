@@ -1033,9 +1033,9 @@ body {
 }
 
 .footer-description {
-    font-size: 0.95rem;
+    font-size: 0.55rem;
     color: rgba(255,255,255,0.8);
-    line-height: 1.6;
+    line-height: 0.7;
 }
 
 .footer-links {
