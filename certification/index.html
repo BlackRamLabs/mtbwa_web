@@ -133,7 +133,7 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">What Certifications Are Available?</h2>
-                <p class="section-subtitle">MTBWA Instructor Certifications are available for all levels of MTB skills instructor, wherever you are on your journey. Build your expertise with our modular system - start with <strong>2.0 Foundations</strong> and add Growth certifications or Modules to expand your coaching scope and increase your proficiency.</p>
+                <p class="section-subtitle">MTBWA Instructor Certifications are available for all levels of MTB skills instructor, wherever you are on your journey. Build your expertise with our modular system - start with <strong>Level 1: Foundations</strong> and add Growth certifications or Modules to expand your coaching scope and increase your proficiency.</p>
             </div>
             
             <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
@@ -190,27 +190,29 @@
 
         <div class="cert-tabs" style="margin-bottom: 30px;">
             <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #e9ecef; padding-bottom: 10px;">
-                <button onclick="showCertTab('level1')" id="tab-level1" style="padding: 10px 20px; background: #f8f9fa; color: #666; border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 1: Introduction</button>
-                <button onclick="showCertTab('level2')" id="tab-level2" style="padding: 10px 20px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 2: Foundations</button>
+                <button onclick="showCertTab('level0')" id="tab-level0" style="padding: 10px 20px; background: #f8f9fa; color: #666; border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 0: Introduction</button>
+                <button onclick="showCertTab('level1')" id="tab-level1" style="padding: 10px 20px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 1: Foundations</button>
+                <button onclick="showCertTab('level2')" id="tab-level2" style="padding: 10px 20px; background: #f8f9fa; color: #666; border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 2: Growth</button>
                 <button onclick="showCertTab('level3')" id="tab-level3" style="padding: 10px 20px; background: #f8f9fa; color: #666; border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 3: Advanced</button>
                 <button onclick="showCertTab('level4')" id="tab-level4" style="padding: 10px 20px; background: #f8f9fa; color: #666; border: none; border-radius: 6px 6px 0 0; cursor: pointer; font-weight: 600; transition: all 0.3s ease;">Level 4: Elite</button>
             </div>
 
-            <div id="cert-content-level1" class="cert-tab-content" style="display: none;">
+            <!-- LEVEL 0 -->
+            <div id="cert-content-level0" class="cert-tab-content" style="display: none;">
                 <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">🌟</div>
                         <div>
-                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Level 1. Introduction</h4>
+                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Level 0. Introduction</h4>
                             <p style="margin: 5px 0 0 0; color: #666; font-style: italic;">Optional starting points</p>
                         </div>
                     </div>
-                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">These entry-level certifications are for new instructors who are not confident in their riding/instructing abilities, or for those who are in the process of a Level 2 certification. They focus on teaching core riding skills and building new rider confidence.</p>
+                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">These entry-level certifications are for new instructors who are not confident in their riding/instructing abilities, or for those who are in the process of a Level 1 certification. They focus on teaching core riding skills and building new rider confidence.</p>
                     
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
                         <div class="cert-list">
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/trailready" target="_blank" class="cert-tag">1.0 Basics</a>
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/core" target="_blank" class="cert-tag">1.1 Beginners</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/trailready" target="_blank" class="cert-tag">0.1 Basics</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/core" target="_blank" class="cert-tag">0.2 Beginners</a>
                         </div>
                     </div>
                     
@@ -225,12 +227,13 @@
                 </div>
             </div>
 
-            <div id="cert-content-level2" class="cert-tab-content">
+            <!-- LEVEL 1 -->
+            <div id="cert-content-level1" class="cert-tab-content">
                 <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">🔨</div>
                         <div>
-                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Level 2. Foundations</h4>
+                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Level 1. Foundations</h4>
                             <p style="margin: 5px 0 0 0; color: #666; font-style: italic;">The skills for all rider levels</p>
                         </div>
                     </div>
@@ -238,25 +241,35 @@
                     
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
                         <div class="cert-list">
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/base" target="_blank" class="cert-tag">2.0 Foundations</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/base" target="_blank" class="cert-tag">1 Foundations</a>
                         </div>
                     </div>
                     
-                    <div style="margin-bottom: 20px;">
-                        <h5 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">Growth Certifications</h5>
-                        <p style="margin: 0 0 15px 0; font-size: 14px; color: #666;">These build on your <strong>2.0 Foundations</strong> certification. You can choose any combination of these to expand your coaching scope. Air (jumps and drops) certs are for instructing on rollable technical trail features.</p>
-                        <div class="cert-list">
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/corners" target="_blank" class="cert-tag">+ Corners</a>
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/rough" target="_blank" class="cert-tag">+ Rough</a>
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/speed" target="_blank" class="cert-tag">+ Speed</a>
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/jump" target="_blank" class="cert-tag">+ Jumps</a>
-                            <a href="https://www.blackrammtb.com.au/services/group-coaching/drop" target="_blank" class="cert-tag">+ Drops</a>
+                    <div style="background: var(--primary-color); color: var(--secondary-color); padding: 20px; border-radius: 8px;">
+                        <h5 style="margin: 0 0 10px 0; color: var(--highlight-color); font-size: 1.1rem;">✨ Perfect For You If:</h5>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                            <li style="margin-bottom: 8px;">You want comprehensive teaching skills</li>
+                            <li style="margin-bottom: 8px;">You plan to teach above beginner riders</li>
+                            <li style="margin-bottom: 8px;">You want to improve your own riding</li>
+                            <li style="margin-bottom: 0;">You're willing to forget what you think you know</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KNOWLEDGE MODULES -->
+            <div id="cert-content-knowledgemodules" class="cert-tab-content">
+                <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 2rem; margin-right: 15px;">🔨</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Knowledge Modules</h4>
+                            <p style="margin: 5px 0 0 0; color: #666; font-style: italic;">Add-on understanding</p>
                         </div>
                     </div>
+                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">These expand your knowledge and expertise (without adding scope to your instruction limitations).</p>
                     
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                        <h5 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">Knowledge Modules</h5>
-                        <p style="margin: 0 0 15px 0; font-size: 14px; color: #666;">These expand your knowledge and expertise (without adding scope to your instruction limitations).</p>
                         <div class="cert-list">
                             <span class="cert-tag theory-tag">Women</span>
                             <span class="cert-tag theory-tag">Kids</span>
@@ -267,15 +280,48 @@
                     <div style="background: var(--primary-color); color: var(--secondary-color); padding: 20px; border-radius: 8px;">
                         <h5 style="margin: 0 0 10px 0; color: var(--highlight-color); font-size: 1.1rem;">✨ Perfect For You If:</h5>
                         <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
-                            <li style="margin-bottom: 8px;">You want comprehensive teaching skills</li>
-                            <li style="margin-bottom: 8px;">You plan to teach beginner to intermediate riders</li>
-                            <li style="margin-bottom: 8px;">You want to improve your own riding</li>
-                            <li style="margin-bottom: 0;">You're ready for in-depth training</li>
+                            <li style="margin-bottom: 8px;">You want to personalise your instruction</li>
+                            <li style="margin-bottom: 8px;">You haven't had your instruction reviewed for a while</li>
+                            <li style="margin-bottom: 0;">You're always wanting to improve</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
+            <!-- LEVEL 2 -->
+            <div id="cert-content-level2" class="cert-tab-content">
+                <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 2rem; margin-right: 15px;">🔨</div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--primary-color); font-size: 1.3rem;">Level 2. Growth</h4>
+                            <p style="margin: 5px 0 0 0; color: #666; font-style: italic;">Increased proficiency</p>
+                        </div>
+                    </div>
+                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">These build on your <strong>Level 1: Foundations</strong> certification. You can choose any combination of these to expand your coaching scope. Air (jumps and drops) certs are for instructing on rollable technical trail features.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/corners" target="_blank" class="cert-tag">+ Corners</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/rough" target="_blank" class="cert-tag">+ Rough</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/speed" target="_blank" class="cert-tag">+ Speed</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/jump" target="_blank" class="cert-tag">+ Jumps</a>
+                            <a href="https://www.blackrammtb.com.au/services/group-coaching/drop" target="_blank" class="cert-tag">+ Drops</a>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--primary-color); color: var(--secondary-color); padding: 20px; border-radius: 8px;">
+                        <h5 style="margin: 0 0 10px 0; color: var(--highlight-color); font-size: 1.1rem;">✨ Perfect For You If:</h5>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                            <li style="margin-bottom: 8px;">You're an experienced Level 1: Foundations instructor</li>
+                            <li style="margin-bottom: 8px;">You have questions on detailed riding techniques</li>
+                            <li style="margin-bottom: 8px;">You want to improve your own riding</li>
+                            <li style="margin-bottom: 0;">You want to teach an expanded set of clinic and content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEVEL 3 -->
             <div id="cert-content-level3" class="cert-tab-content" style="display: none;">
                 <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
@@ -285,7 +331,7 @@
                             <p style="margin: 5px 0 0 0; color: #666; font-style: italic;">You're a master of your craft</p>
                         </div>
                     </div>
-                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">When you have completed all Growth level certifications, you are considered a <strong>3.0 Advanced</strong> level instructor.</p>
+                    <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #666;">When you have completed all Level 2: Growth certifications, you are considered a <strong>Level 3: Advanced</strong> level instructor.</p>
                     
                     <div style="background: var(--highlight-color); padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
                         <div style="font-size: 2rem; margin-bottom: 10px;">🏆</div>
@@ -304,6 +350,7 @@
                 </div>
             </div>
 
+            <!-- LEVEL 4 -->
             <div id="cert-content-level4" class="cert-tab-content" style="display: none;">
                 <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
@@ -325,13 +372,13 @@
                     <div style="background: var(--primary-color); color: var(--secondary-color); padding: 20px; border-radius: 8px;">
                         <h5 style="margin: 0 0 10px 0; color: var(--highlight-color); font-size: 1.1rem;">✨ Perfect For You If:</h5>
                         <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
-                            <li style="margin-bottom: 8px;">You're already an experienced 3.0 Advanced instructor working with advanced riders</li>
+                            <li style="margin-bottom: 8px;">You're already an experienced Level 3: Advanced instructor working with advanced riders</li>
                             <li style="margin-bottom: 8px;">You happily ride:</li>
                                 <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
                                     <li style="margin-bottom: 8px;">4.0 = Steep gap jumps</li>
                                     <li style="margin-bottom: 8px;">4.1 = Extreme terrain (double black tech and flow)</li>
                                 </ul>
-                            <li style="margin-bottom: 8px;">Risk management is part of your coaching philosophy</li>
+                            <li style="margin-bottom: 8px;">Risk management is part of your instructing subconscious</li>
                             <li style="margin-bottom: 0;">You're ready for the highest level of instructor challenge</li>
                         </ul>
                     </div>
@@ -370,8 +417,8 @@
             document.getElementById('tab-' + level).style.color = 'var(--primary-color)';
         }
         
-        // Initialize with level2 tab
-        showCertTab('level2');
+        // Initialize with level1 tab
+        showCertTab('level1');
     </script>
 
     <!-- Assessment Procedure Section -->
