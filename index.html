@@ -34,20 +34,6 @@
                 <p class="hero-subtitle">
                     If you're just curious about mountain biking, ride for fun, or this is your work; you're part of the MTB WA crew. We're making sustainable mountain biking in Western Australia possible through education, professionalism, advocacy, industry partnerships, and local engagement.
                 </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="1000">0</span>
-                        <span class="stat-label">Members</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
-                        <span class="stat-label">Trails</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="25">0</span>
-                        <span class="stat-label">Events</span>
-                    </div>
-                </div>
             </div>
             <div class="hero-scroll-indicator">
                 <div class="scroll-arrow"></div>
@@ -246,43 +232,7 @@
             offset: 100
         });
 
-        // Animated counter for stats
-        function animateCounter(element, target) {
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += step;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current);
-            }, 16);
-        }
-
-        // Initialize counters when visible
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px'
-        };
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.dataset.target);
-                    animateCounter(entry.target, target);
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all stat numbers
-        document.querySelectorAll('.stat-number').forEach(stat => {
-            counterObserver.observe(stat);
-        });
-
+        
         // Smooth scroll behavior
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
