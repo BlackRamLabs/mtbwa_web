@@ -6,10 +6,14 @@
     <title>Local Community - MTB Western Australia</title>
     <link rel="stylesheet" href="../components/styles.css">
     <link rel="icon" type="image/png" href="../assets/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         /* Override font for community page */
         body {
-            font-family: 'Roboto', Arial, sans-serif !important;
+            font-family: 'Inter', Arial, sans-serif !important;
         }
 
         .community-main {
@@ -117,10 +121,47 @@
     <div id="navigation-placeholder"></div>
     <script src="../components/navigation.js"></script>
 
-    <main class="community-main">
-        <h1>Local Community</h1>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-image-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200" 
+                 alt="Mountain bike community riding together" 
+                 class="hero-bg-image">
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Join Our</span>
+                    <span class="hero-title-line highlight">MTB</span>
+                    <span class="hero-title-line">Community</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Connect with fellow mountain bikers across Western Australia. From group rides and events to local bike shops and resources, discover everything you need to be part of our thriving MTB community.
+                </p>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
 
-        <section id="community-groups" class="community-section">
+    <!-- Community Overview Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Connect & Ride Together</h2>
+                <p class="section-subtitle">Whether you're looking for group rides, events, or local resources, our community has something for every rider in Western Australia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Groups Section -->
+    <section class="features-section">
+        <div class="container">
+            <section id="community-groups" class="community-section" data-aos="fade-up">
             <h2>Community Groups</h2>
             <ul class="community-list">
                 <li><a href="https://www.facebook.com/groups/track.mtb/" target="_blank">WA Mountain Bike Community | Facebook</a></li>
@@ -310,15 +351,5 @@
             </ul>
             
             <h3 style="color: #212121; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Great Southern Region</h3>
-            <ul class="community-list">
-                <li><a href="https://monkeyrockmtbdenmark.com.au" target="_blank">Monkey Rock</a> - Denmark</li>
-            </ul>
-        </section>
-
-        <section class="community-section">
-            <h2>Get Involved</h2>
-            <p>Are you interested in helping grow MTB community in WA? Check out <a href="../certification/index.html">MTBWA Instructor Training</a> to get certified for sharing skills of mountain biking!</p>
-        </section>
-    </main>
 </body>
 </html>
