@@ -12,6 +12,58 @@ body {
     line-height: 1.6;
 }
 
+/* Global Link Styles */
+a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+/* Links in dark backgrounds */
+.hero a,
+.trainer-box a,
+.cert-tag a {
+    color: #64b5f6 !important;
+}
+
+.hero a:hover,
+.trainer-box a:hover,
+.cert-tag a:hover {
+    color: #90caf9 !important;
+}
+
+/* Links in content sections */
+.content-section a,
+.community-list a {
+    color: #1976d2;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.content-section a:hover,
+.community-list a:hover {
+    color: #1565c0;
+    text-decoration: none;
+    border-bottom-color: #1565c0;
+}
+
+/* Buttons should not inherit link colors */
+.trail-link,
+.cta-button {
+    color: inherit !important;
+}
+
+.trail-link:hover,
+.cta-button:hover {
+    color: inherit !important;
+}
+
 /* Navigation */
 header {
     background-color: #4f4f4e;
