@@ -647,7 +647,11 @@ body {
     text-align: center;
     color: #ffffff;
     max-width: 800px;
-    padding: 0 20px;
+    padding: 0 20px 120px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
 }
 
 .hero-title {
@@ -695,7 +699,7 @@ body {
 
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -704,6 +708,7 @@ body {
     gap: 12px;
     opacity: 0;
     animation: fadeInUp 0.8s ease-out 1.1s forwards;
+    z-index: 4;
 }
 
 .scroll-arrow {
