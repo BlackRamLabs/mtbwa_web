@@ -21,14 +21,50 @@ fetch(getComponentsPath())
         const currentPath = window.location.pathname;
         const navLinks = document.querySelectorAll('.nav-menu > li > a');
         
+        // Clear any existing active states first
+        navLinks.forEach(link => {
+            link.removeAttribute('aria-current');
+        });
+        
+        // Determine active page based on current path
         navLinks.forEach(link => {
             const linkPath = new URL(link.href).pathname;
-            if (linkPath === currentPath || 
-                (currentPath.endsWith('index.html') && linkPath.endsWith('index.html')) ||
-                (currentPath.includes('/certification/') && linkPath.includes('/certification/')) ||
-                (currentPath.includes('/trails/') && linkPath.includes('/trails/') && !linkPath.includes('/map.html') && !linkPath.includes('/videos.html')) ||
-                (currentPath.includes('/community/') && linkPath.includes('/community/'))) {
+            
+            // Normalize current path (remove trailing slash for comparison)
+            const normalizedCurrentPath = currentPath.replace(/\/$/, '') || '/';
+            const normalizedLinkPath = linkPath.replace(/\/$/, '') || '/';
+            
+            // Exact match for root
+            if (normalizedCurrentPath === '/' && normalizedLinkPath === '/') {
                 link.setAttribute('aria-current', 'true');
+                return;
+            }
+            
+            // Check for certification section
+            if ((normalizedCurrentPath === '/certification' || normalizedCurrentPath.includes('/certification/index')) && 
+                normalizedLinkPath === '/certification') {
+                link.setAttribute('aria-current', 'true');
+                return;
+            }
+            
+            // Check for trails section (excluding sub-pages)
+            if ((normalizedCurrentPath === '/trails' || normalizedCurrentPath.includes('/trails/index')) && 
+                normalizedLinkPath === '/trails') {
+                link.setAttribute('aria-current', 'true');
+                return;
+            }
+            
+            // Check for community section
+            if ((normalizedCurrentPath === '/community' || normalizedCurrentPath.includes('/community/index')) && 
+                normalizedLinkPath === '/community') {
+                link.setAttribute('aria-current', 'true');
+                return;
+            }
+            
+            // Exact path matches for sub-pages
+            if (normalizedCurrentPath === normalizedLinkPath) {
+                link.setAttribute('aria-current', 'true');
+                return;
             }
         });
     })
