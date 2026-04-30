@@ -47,8 +47,11 @@ fetch(getComponentsPath())
                 return;
             }
             
-            // Check for trails section (excluding sub-pages)
-            if ((normalizedCurrentPath === '/trails' || normalizedCurrentPath.includes('/trails/index')) && 
+            // Check for trails section (including sub-pages)
+            if ((normalizedCurrentPath === '/trails' || 
+                 normalizedCurrentPath.includes('/trails/index') ||
+                 normalizedCurrentPath.includes('/trails/map') ||
+                 normalizedCurrentPath.includes('/trails/videos')) && 
                 normalizedLinkPath === '/trails') {
                 link.setAttribute('aria-current', 'true');
                 return;
