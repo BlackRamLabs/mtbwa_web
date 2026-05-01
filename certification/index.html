@@ -625,9 +625,11 @@
                 // Test Level 1 tab button is highlighted by default
                 const level1Button = document.querySelector('.tab-button.level1');
                 
-                // Debug logging
+                // Debug logging - check both inline and computed styles
                 if (level1Button) {
-                    this.log(`DEBUG: level1 button - inline background: ${level1Button.style.background}, inline color: ${level1Button.style.color}`, 'info');
+                    this.log(`DEBUG: level1 button - inline: bg=${level1Button.style.background}, color=${level1Button.style.color}`, 'info');
+                    const computed = getComputedStyle(level1Button);
+                    this.log(`DEBUG: level1 button - computed: bg=${computed.background}, color=${computed.color}`, 'info');
                 }
                 
                 const level1Highlighted = level1Button && 
@@ -640,9 +642,11 @@
                 unhighlightedLevels.forEach(level => {
                     const button = document.querySelector('.tab-button.' + level);
                     
-                    // Debug logging
+                    // Debug logging - check both inline and computed styles
                     if (button) {
-                        this.log(`DEBUG: ${level} button - inline background: ${button.style.background}, inline color: ${button.style.color}`, 'info');
+                        this.log(`DEBUG: ${level} button - inline: bg=${button.style.background}, color=${button.style.color}`, 'info');
+                        const computed = getComputedStyle(button);
+                        this.log(`DEBUG: ${level} button - computed: bg=${computed.background}, color=${computed.color}`, 'info');
                     }
                     
                     const isUnhighlighted = button && 
