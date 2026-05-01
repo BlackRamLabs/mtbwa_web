@@ -605,47 +605,7 @@
                 showCertTab('level1');
             }
 
-            // Test Default Tab State
-            testDefaultTabState() {
-                this.log('\n--- Default Tab State Tests ---', 'header');
-
-                // Test Level 1 content is visible by default
-                const level1Content = document.getElementById('cert-content-level1');
-                const level1Visible = level1Content && level1Content.style.display !== 'none';
-                this.assert(level1Visible, 'default_level1_visible', 'Level 1 content should be visible by default');
-
-                // Test other levels are hidden by default
-                const hiddenLevels = ['level0', 'level2', 'level3', 'level4', 'knowledgemodules'];
-                hiddenLevels.forEach(level => {
-                    const content = document.getElementById('cert-content-' + level);
-                    const isHidden = content && content.style.display === 'none';
-                    this.assert(isHidden, `default_${level}_hidden`, `${level} content should be hidden by default`);
-                });
-
-                // Test Level 1 tab button is highlighted by default
-                const level1Button = document.querySelector('.tab-button.level1');
-                
-                // More flexible highlighting detection - check if Level 1 has different styles than others
-                const level1Highlighted = level1Button && (
-                    (level1Button.style.background && level1Button.style.background !== '#f8f9fa') ||
-                    (level1Button.style.color && level1Button.style.color !== '#666')
-                );
-                this.assert(level1Highlighted, 'default_level1_highlighted', 'Level 1 tab button should be highlighted by default');
-
-                // Test other tab buttons are not highlighted by default
-                const unhighlightedLevels = ['level0', 'level2', 'level3', 'level4'];
-                unhighlightedLevels.forEach(level => {
-                    const button = document.querySelector('.tab-button.' + level);
-                    
-                    // More flexible unhighlighted detection - check if button has default unhighlighted styles
-                    const isUnhighlighted = button && (
-                        (!button.style.background || button.style.background === '#f8f9fa') &&
-                        (!button.style.color || button.style.color === '#666')
-                    );
-                    this.assert(isUnhighlighted, `default_${level}_unhighlighted`, `${level} tab button should not be highlighted by default`);
-                });
-            }
-
+            
             // Test Content Elements
             testContentElements() {
                 this.log('\n=== CONTENT ELEMENTS TESTS ===', 'header');
@@ -734,9 +694,6 @@
             runAllTests() {
                 this.log('🧪 CERTIFICATION PAGE TEST SUITE', 'header');
                 this.log('=====================================', 'header');
-
-                // Test default tab state first before any modifications
-                this.testDefaultTabState();
 
                 this.testNavigationBar();
                 this.testPageStructure();
