@@ -1015,6 +1015,132 @@ transition: transform 0.3s ease;
     transform: translateX(4px);
 }
 
+/* Certification Page Styles */
+.cert-content-card {
+    background: var(--theme-bg-secondary, #f8f9fa);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.cert-perfect-card {
+    background: linear-gradient(135deg, var(--theme-bg-primary, #f8f9fa) 0%, var(--theme-bg-secondary, #f0f0f0) 100%);
+    color: var(--theme-text-primary, #212121);
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px solid var(--highlight-color);
+    box-shadow: 0 4px 12px var(--theme-shadow-light, rgba(0, 0, 0, 0.1));
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-perfect-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--highlight-color), var(--highlight-color));
+}
+
+.cert-perfect-card h5 {
+    margin: 0 0 16px 0;
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 1px 2px var(--theme-shadow-light, rgba(0, 0, 0, 0.1));
+}
+
+.cert-perfect-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.cert-perfect-card li {
+    margin-bottom: 8px;
+}
+
+.cert-perfect-card li:last-child {
+    margin-bottom: 0;
+}
+
+.cert-achievement-card {
+    background: var(--highlight-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cert-achievement-card .achievement-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cert-achievement-card h5 {
+    margin: 0 0 10px 0;
+    color: var(--theme-text-primary, #212121);
+    font-size: 1.1rem;
+}
+
+.cert-meaning-card {
+    background: var(--theme-bg-primary, #212121);
+    color: var(--theme-text-primary, #ffffff);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cert-meaning-card h5 {
+    margin: 0 0 10px 0;
+    color: var(--highlight-color);
+    font-size: 1.1rem;
+}
+
+.cert-meaning-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.cert-meaning-card li {
+    margin-bottom: 8px;
+}
+
+.cert-meaning-card li:last-child {
+    margin-bottom: 0;
+}
+
+.cert-level-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cert-level-header .level-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.cert-level-header .level-info h4 {
+    margin: 0;
+    color: var(--theme-text-primary, #212121);
+    font-size: 1.3rem;
+}
+
+.cert-level-header .level-info p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+}
+
+.cert-light-gray-card {
+    background: var(--theme-bg-secondary, #f8f9fa);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 /* Values Section */
 .values-section {
     padding: 80px 0;
