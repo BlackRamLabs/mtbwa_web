@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trails Map - MTB Western Australia</title>
+    <title>Trails WA Trails Map - MTB Western Australia</title>
     <link rel="stylesheet" href="../../components/styles.css">
     <style>
         body,
@@ -26,9 +26,11 @@
             width: 100%;
         }
         
-        .TrailsWAWidgetMap {
+        .trails-wa-iframe {
             width: 100% !important;
             height: 100% !important;
+            border: none;
+            border-radius: 0;
         }
     </style>
 </head>
@@ -37,12 +39,13 @@
     <script src="../../components/navigation.js"></script>
     
     <div class="full-page-container">
-        <!-- TRAILS WA WIDGET START -->
-        <div class="TrailsWAWidgetMap" data-w="100%" data-h="100%" data-rid="3458" data-activitytype="1"
-            data-maptype="trailforks" data-trailstyle="difficulty" data-controls="1" data-list="0" data-dml="1"
-            data-layers="labels,poi,polygon,directory,region" data-z="" data-lat="" data-lon=""
-            data-hideunsanctioned="0" data-basicmap="0"></div>
-        <!-- TRAILS WA WIDGET END -->
+        <!-- TRAILS WA IFRAME START -->
+        <iframe 
+            src="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=mountain-bike"
+            class="trails-wa-iframe"
+            title="Trails WA Mountain Bike Trails Map">
+        </iframe>
+        <!-- TRAILS WA IFRAME END -->
     </div>
 </body>
 </html>
