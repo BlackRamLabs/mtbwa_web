@@ -777,66 +777,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Theme Management System
-        class ThemeManager {
-            constructor() {
-                this.storageKey = 'mtbwa-theme-preference';
-                this.darkThemeClass = 'dark-theme';
-                this.init();
-            }
-
-            init() {
-                // Load saved preference or use system preference
-                const savedTheme = localStorage.getItem(this.storageKey);
-                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
-                if (savedTheme) {
-                    this.setTheme(savedTheme);
-                } else {
-                    this.setTheme(systemPrefersDark ? 'dark' : 'light');
-                }
-
-                // Listen for system theme changes (only if no manual preference)
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                    if (!localStorage.getItem(this.storageKey)) {
-                        this.setTheme(e.matches ? 'dark' : 'light');
-                    }
-                });
-            }
-
-            setTheme(theme) {
-                const root = document.documentElement;
-                
-                if (theme === 'dark') {
-                    root.classList.add(this.darkThemeClass);
-                } else {
-                    root.classList.remove(this.darkThemeClass);
-                }
-
-                // Update toggle button if it exists
-                this.updateToggle(theme);
-            }
-
-            toggleTheme() {
-                const currentTheme = localStorage.getItem(this.storageKey) || 
-                    (document.documentElement.classList.contains(this.darkThemeClass) ? 'dark' : 'light');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                localStorage.setItem(this.storageKey, newTheme);
-                this.setTheme(newTheme);
-            }
-
-            updateToggle(theme) {
-                const toggle = document.getElementById('theme-toggle');
-                if (toggle) {
-                    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-                    toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-                }
-            }
-        }
-
-        // Initialize theme manager
-        const themeManager = new ThemeManager();
+        // Theme Manager is now loaded from components/theme-manager.js
 
         // Initialize AOS
         AOS.init({
