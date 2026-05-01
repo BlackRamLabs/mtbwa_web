@@ -206,13 +206,13 @@
 
         .action-btn.secondary {
             background: transparent;
-            color: var(--primary-color);
-            border-color: var(--primary-color);
+            color: var(--theme-text-primary, var(--primary-color));
+            border-color: var(--theme-text-primary, var(--primary-color));
         }
 
         .action-btn.secondary:hover {
-            background: var(--primary-color);
-            color: white;
+            background: var(--theme-text-primary, var(--primary-color));
+            color: var(--theme-bg-primary, white);
             transform: translateX(2px);
         }
 
