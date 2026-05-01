@@ -176,7 +176,7 @@
 
         .platform-actions {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             gap: 12px;
         }
 
@@ -192,6 +192,8 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            min-width: fit-content;
+            white-space: nowrap;
         }
 
         .action-btn.primary {
@@ -214,7 +216,22 @@
         .action-btn.secondary:hover {
             background: var(--theme-text-primary, var(--primary-color));
             color: var(--theme-bg-primary, white);
-            transform: translateX(2px);
+            transform: translateY(-1px);
+        }
+
+        /* Ensure all action-btn elements have consistent styling regardless of context */
+        .platform-actions .action-btn,
+        .form-actions .action-btn,
+        .cta-buttons .action-btn {
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .platform-actions .action-btn:hover,
+        .form-actions .action-btn:hover,
+        .cta-buttons .action-btn:hover {
+            transform: translateY(-1px);
         }
 
         .btn-icon {
