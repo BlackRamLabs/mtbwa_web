@@ -14,6 +14,56 @@
         .trail-links {
             grid-template-columns: 1fr;
         }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .info-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .info-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .resource-list, .safety-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resource-list li, .safety-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .resource-list li:last-child, .safety-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .resource-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .resource-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -83,35 +133,32 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Official Trail Information</h2>
-                <p class="section-subtitle">The "official" trail database for Western Australia is <a href="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=cross-country&trailType%5B1%5D=downhill&trailType%5B2%5D=enduro-all-mountain" target="_blank">Trails WA</a>.</p>
+                <p class="section-subtitle">The official trail database for Western Australia is <a href="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=cross-country&trailType%5B1%5D=downhill&trailType%5B2%5D=enduro-all-mountain" target="_blank">Trails WA</a>.</p>
             </div>
             
             <div class="content-section" data-aos="fade-up" data-aos-delay="100">
-            <h2>Official Trail Information</h2>
-            <p>The "official" trail database for Western Australia is <a href="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=cross-country&trailType%5B1%5D=downhill&trailType%5B2%5D=enduro-all-mountain" target="_blank">Trails WA</a>.</p>
-            <p>Some missing trails:
-            <ul class="community-list">
-                <li><a href="https://satterley.com.au/allara/lifestyle/aduro-park/" target="_blank">Aduro Park</a> - Allara Urban Trails</li>
-                <!-- <li><a href="https://visitfremantle.com.au/article/booyeembara-park-mountain-bike-trails" target="_blank">Booyeembara Park</a> - Fremantle Urban Trails</li> -->
-                <li><a href="https://www.melvillecity.com.au/things-to-do/sport-and-recreation/bike-parks" target="_blank">Dyoondalup | Pt Walter</a> - Melville Urban Trails</li>
-                <li><a href="https://www.capemountainbikers.asn.au/meelup.html" target="_blank">Meelup / Dunsborough</a></li>
-                <li><a href="https://www.lingalongabikepark.com" target="_blank">Linga Longa</a> - Private property bike park</li>
-                <li><a href="https://www.york.wa.gov.au/Profiles/york/Assets/ClientData/220224_York_Trail_Network_Concept_A4_Final_Draft_2022_-_Copy_reduced_size__003_.pdf" target="_blank">Mt Brown</a> - York trail network</li>
-                <li><a href="https://www.chittering.wa.gov.au/project-bindoon-mountain-bike-adventure-park.aspx" target="_blank">Bindoon MTB & Adventure Park</a></li>
-            </ul>
-            </p>
-            
-            <h3 style="color: #212121; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Important Note About Unsanctioned Trails</h3>
-            <p>There are a lot of unsanctioned trails out there.</p>
-            <p>The Valley, Mundaring, Byford, Manning Park, Bell's Rapids, Darlington, Glen Forrest, Orange Grove, Kelmscott, Roleystone, Bedfordale, Wellington Mills, and all the other unsanctioned trails around Mt Gunjin, Kalamunda, John Forrest, Margaret River, Nannup, Albany, Denmark, and others...</p>
-            <p>We don't share details for you to go riding these trails by yourself, even if they are the best trails WA has to offer. Don't just go ride these because you have heard about them or discovered them online. Find someone to guide you, don't get out of your depth, and know how to respect the wishes of those responsible for the trails and the land they're on.</p>
-
-            <ul class="community-list">
-                <li><a href="https://www.trailforks.com/region/western-australia/" target="_blank">Trailforks</a> - Community-maintained trail database (admin restricted details)</li>
-            </ul>
-            
-            <h3 style="color: #212121; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Race-Only Locations</h3>
-            <p>There's also Three Chillies Farm and the Golden Grove Orchard in Chittering, Evedon Lakeside Retreat in the Furguson Valley, and Echidna Park outside Geraldton that have been used for WA Gravity Enduro races. These are not typically open. Wait for races if they happen.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3 class="info-title">Popular Trail Resources</h3>
+                        <p class="info-description">Find comprehensive trail information and maps through these official resources:</p>
+                        <ul class="resource-list">
+                            <li><a href="https://trailswa.com.au/trails/explore" target="_blank" class="resource-link">Trails WA Official Database</a></li>
+                            <li><a href="https://www.trailforks.com/region/western-australia/" target="_blank" class="resource-link">Trailforks Community Database</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3 class="info-title">Trail Safety & Etiquette</h3>
+                        <p class="info-description">Important guidelines for responsible trail riding in Western Australia:</p>
+                        <ul class="safety-list">
+                            <li>Respect land access and private property</li>
+                            <li>Follow designated trail routes and signage</li>
+                            <li>Check trail conditions before riding</li>
+                            <li>Leave no trace and pack out what you pack in</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Get Involved Section -->
