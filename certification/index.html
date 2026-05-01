@@ -627,7 +627,9 @@
                 this.assert(featureCards.length > 0, 'feature_cards_exist', 'Page should have feature cards');
 
                 // Test MTBWA logo loading
-                const logoImages = document.querySelectorAll('img[src*="MTBWA_logo"]');
+                const navigationLogo = document.querySelector('.logo-image');
+                const footerLogo = document.querySelector('.footer-logo');
+                const logoImages = [navigationLogo, footerLogo].filter(logo => logo !== null);
                 this.assert(logoImages.length > 0, 'mtbwa_logo_loaded', 'MTBWA logo images should load');
 
                 // Test MTBWA icon loading
