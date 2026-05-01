@@ -984,13 +984,16 @@ transition: transform 0.3s ease;
 
 .assessment-procedure .feature-card .feature-description {
     flex-shrink: 0;
-    flex-grow: 0;
 }
 
-.assessment-procedure .feature-card > div[style*="background: var(--theme-bg-secondary)"] {
+.assessment-procedure .setting-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.assessment-procedure .setting-container > div[style*="background: var(--theme-bg-secondary)"] {
     margin-top: auto;
-    flex-shrink: 0;
-    flex-grow: 0;
 }
 
 .icon-wrapper {
