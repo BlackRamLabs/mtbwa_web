@@ -55,7 +55,7 @@ a:hover {
 /* Links in content sections */
 .content-section a,
 .community-list a {
-    color: #1976d2;
+    color: var(--link-color, #1976d2);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
@@ -63,9 +63,9 @@ a:hover {
 
 .content-section a:hover,
 .community-list a:hover {
-    color: #1565c0;
+    color: var(--link-color, #1565c0);
     text-decoration: none;
-    border-bottom-color: #1565c0;
+    border-bottom-color: var(--link-color, #1565c0);
 }
 
 /* Buttons should not inherit link colors */
