@@ -572,6 +572,9 @@
             testTabFunctionality() {
                 this.log('\n=== TAB FUNCTIONALITY TESTS ===', 'header');
 
+                // Test default tab state
+                this.testDefaultTabState();
+
                 const levels = ['level0', 'level1', 'level2', 'level3', 'level4'];
 
                 levels.forEach(level => {
@@ -599,6 +602,41 @@
                         });
                         this.assert(highlightedCount === highlightedTabs.length, `tab_highlight_${level}`, `Tabs for ${level} should be highlighted when active`);
                     }
+                });
+            }
+
+            // Test Default Tab State
+            testDefaultTabState() {
+                this.log('\n--- Default Tab State Tests ---', 'header');
+
+                // Test Level 1 content is visible by default
+                const level1Content = document.getElementById('cert-content-level1');
+                const level1Visible = level1Content && level1Content.style.display !== 'none';
+                this.assert(level1Visible, 'default_level1_visible', 'Level 1 content should be visible by default');
+
+                // Test other levels are hidden by default
+                const hiddenLevels = ['level0', 'level2', 'level3', 'level4', 'knowledgemodules'];
+                hiddenLevels.forEach(level => {
+                    const content = document.getElementById('cert-content-' + level);
+                    const isHidden = content && content.style.display === 'none';
+                    this.assert(isHidden, `default_${level}_hidden`, `${level} content should be hidden by default`);
+                });
+
+                // Test Level 1 tab button is highlighted by default
+                const level1Button = document.querySelector('.tab-button.level1');
+                const level1Highlighted = level1Button && 
+                    level1Button.style.background === 'var(--highlight-color)' && 
+                    level1Button.style.color === 'var(--primary-color)';
+                this.assert(level1Highlighted, 'default_level1_highlighted', 'Level 1 tab button should be highlighted by default');
+
+                // Test other tab buttons are not highlighted by default
+                const unhighlightedLevels = ['level0', 'level2', 'level3', 'level4'];
+                unhighlightedLevels.forEach(level => {
+                    const button = document.querySelector('.tab-button.' + level);
+                    const isUnhighlighted = button && 
+                        button.style.background === '#f8f9fa' && 
+                        button.style.color === '#666';
+                    this.assert(isUnhighlighted, `default_${level}_unhighlighted`, `${level} tab button should not be highlighted by default`);
                 });
             }
 
