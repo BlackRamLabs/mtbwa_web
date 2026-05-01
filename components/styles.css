@@ -27,6 +27,20 @@ body {
     line-height: 1.6;
 }
 
+/* Global text color defaults that inherit from theme variables */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--theme-text-primary, #212121);
+}
+
+p, span, div, li, td, th {
+    color: var(--theme-text-primary, #212121);
+}
+
+/* Allow specific overrides for secondary text */
+.text-secondary, .muted, .subtitle {
+    color: var(--theme-text-secondary, #666666);
+}
+
 /* Global Link Styles */
 a {
     color: #1976d2;
