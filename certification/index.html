@@ -572,9 +572,6 @@
             testTabFunctionality() {
                 this.log('\n=== TAB FUNCTIONALITY TESTS ===', 'header');
 
-                // Test default tab state
-                this.testDefaultTabState();
-
                 const levels = ['level0', 'level1', 'level2', 'level3', 'level4'];
 
                 levels.forEach(level => {
@@ -743,6 +740,9 @@
             runAllTests() {
                 this.log('🧪 CERTIFICATION PAGE TEST SUITE', 'header');
                 this.log('=====================================', 'header');
+
+                // Test default tab state first before any modifications
+                this.testDefaultTabState();
 
                 this.testNavigationBar();
                 this.testPageStructure();
