@@ -266,7 +266,7 @@ nav {
 .cta-button {
     display: inline-block;
     background: var(--highlight-color);
-    color: #212121;
+    color: var(--theme-text-primary, #212121);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -443,7 +443,7 @@ main h1 {
     font-size: 48px;
     font-weight: 100;
     margin-bottom: 20px;
-    color: #212121;
+    color: var(--theme-text-primary, #212121);
     line-height: 1.2;
 }
 
@@ -551,7 +551,7 @@ main h5 {
     font-size: 48px;
     font-weight: 100;
     margin-bottom: 40px;
-    color: #212121;
+    color: var(--theme-text-primary, #212121);
     line-height: 1.2;
 }
 
@@ -745,7 +745,7 @@ body {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     margin-bottom: 24px;
-    color: var(--primary-color);
+    color: var(--theme-text-primary, var(--primary-color));
     line-height: 1.2;
 }
 
