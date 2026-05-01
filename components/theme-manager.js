@@ -28,11 +28,17 @@ class ThemeManager {
     setTheme(theme) {
         const root = document.documentElement;
         
+        console.log('Theme change:', theme);
+        console.log('Current classes:', root.className);
+        
         if (theme === 'dark') {
             root.classList.add(this.darkThemeClass);
         } else {
             root.classList.remove(this.darkThemeClass);
         }
+
+        console.log('Updated classes:', root.className);
+        console.log('Has dark theme class:', root.classList.contains(this.darkThemeClass));
 
         this.updateToggle();
     }
