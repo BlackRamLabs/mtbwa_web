@@ -628,6 +628,12 @@
                 // Test Level 1 tab button is highlighted by default
                 const level1Button = document.querySelector('.tab-button.level1');
                 const level1Style = level1Button ? getComputedStyle(level1Button) : null;
+                
+                // Debug logging
+                if (level1Style) {
+                    this.log(`DEBUG: level1 button - background: ${level1Style.background}, color: ${level1Style.color}`, 'info');
+                }
+                
                 const level1Highlighted = level1Style && 
                     level1Style.background !== 'rgb(248, 249, 250)' && 
                     level1Style.background !== '#f8f9fa' &&
@@ -640,6 +646,12 @@
                 unhighlightedLevels.forEach(level => {
                     const button = document.querySelector('.tab-button.' + level);
                     const buttonStyle = button ? getComputedStyle(button) : null;
+                    
+                    // Debug logging
+                    if (buttonStyle) {
+                        this.log(`DEBUG: ${level} button - background: ${buttonStyle.background}, color: ${buttonStyle.color}`, 'info');
+                    }
+                    
                     const isUnhighlighted = buttonStyle && 
                         (buttonStyle.background === 'rgb(248, 249, 250)' || buttonStyle.background === '#f8f9fa') && 
                         (buttonStyle.color === 'rgb(102, 102, 102)' || buttonStyle.color === '#666');
