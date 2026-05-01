@@ -640,6 +640,7 @@ body {
     position: relative;
     height: 100vh;
     min-height: 600px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
