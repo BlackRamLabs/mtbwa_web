@@ -74,7 +74,7 @@ class ThemeManager {
 
     updateLogo() {
         const isDark = document.documentElement.classList.contains(this.darkThemeClass);
-        const logoPath = isDark ? '/assets/images/MTBWA_logo[light].png' : '/assets/images/MTBWA_logo.png';
+        const logoPath = isDark ? '/assets/images/MTBWA_logo[light][small].png' : '/assets/images/MTBWA_logo[small].png';
         
         // Update header logo
         const headerLogo = document.querySelector('.logo-image');
