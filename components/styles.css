@@ -964,6 +964,16 @@ transition: transform 0.3s ease;
     filter: brightness(0) saturate(100%) invert(31%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(96%) contrast(96%);
 }
 
+/* Assessment Procedure cards - align Setting boxes to bottom */
+.assessment-procedure .feature-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.assessment-procedure .feature-card > div[style*="background: var(--theme-bg-secondary)"] {
+    margin-top: auto;
+}
+
 .icon-wrapper {
     width: 64px;
     height: 64px;
