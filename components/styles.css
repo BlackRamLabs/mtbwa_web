@@ -958,6 +958,12 @@ transition: transform 0.3s ease;
     margin-bottom: 16px;
 }
 
+.feature-icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(96%) contrast(96%);
+}
+
 .icon-wrapper {
     width: 64px;
     height: 64px;
