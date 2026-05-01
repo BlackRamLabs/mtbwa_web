@@ -1113,7 +1113,7 @@ transition: transform 0.3s ease;
 
 /* Footer */
 .main-footer {
-    background: var(--theme-bg-primary, var(--primary-color));
+    background: var(--theme-bg-secondary, var(--primary-color));
     color: var(--theme-text-primary, #ffffff);
     padding: 60px 0 20px;
 }
