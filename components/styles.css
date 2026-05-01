@@ -201,7 +201,7 @@ nav {
 }
 
 .nav-menu > li > a:hover {
-    background-color: var(--white-transparent);
+    background-color: var(--theme-bg-tertiary, rgba(0, 0, 0, 0.05));
 }
 
 .nav-menu > li > a[aria-current="true"] {
@@ -232,7 +232,7 @@ nav {
 }
 
 .dropdown a:hover {
-    background-color: var(--white-transparent);
+    background-color: var(--theme-bg-tertiary, rgba(0, 0, 0, 0.05));
 }
 
 .nav-menu li:hover .dropdown {
