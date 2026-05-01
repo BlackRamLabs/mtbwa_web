@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.text())
                 .then(html => {
                     footerPlaceholder.innerHTML = html;
+                    // Update toggle button styling after footer loads
+                    if (window.themeManager) {
+                        window.themeManager.updateToggle();
+                    }
                 })
                 .catch(error => {
                     console.error('Error loading footer component:', error);
