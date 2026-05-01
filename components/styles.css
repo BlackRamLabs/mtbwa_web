@@ -426,12 +426,14 @@ nav {
     background: var(--theme-bg-primary);
     color: var(--theme-text-primary) !important;
     padding: 8px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-decoration: none;
     display: inline-block;
     transition: transform 0.2s, background 0.2s;
+    border: 1px solid var(--theme-border-color);
+    box-shadow: 0 1px 3px var(--theme-shadow-light);
 }
 
 .cert-tag:hover {
@@ -440,6 +442,8 @@ nav {
 
 .add-scope-tag {
     background: var(--highlight-color);
+    border: 1px solid var(--theme-border-color);
+    box-shadow: 0 1px 3px var(--theme-shadow-light);
 }
 
 .add-scope-tag:hover {
@@ -449,6 +453,8 @@ nav {
 .theory-tag {
     background: var(--highlight-color);
     color: var(--primary-color);
+    border: 1px solid var(--theme-border-color);
+    box-shadow: 0 1px 3px var(--theme-shadow-light);
 }
 
 .theory-tag:hover {
