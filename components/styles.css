@@ -867,6 +867,17 @@ body {
     height: 100%;
 }
 
+.feature-card > *:not(ul) {
+    flex-shrink: 0;
+}
+
+.feature-card ul {
+    margin-top: auto;
+    text-align: left;
+    padding-left: 0;
+    list-style: none;
+}
+
 
 .feature-card::before {
 content: '';
@@ -945,13 +956,6 @@ transition: transform 0.3s ease;
     margin-bottom: 32px;
 }
 
-/* Align unordered lists in feature cards */
-.feature-card ul {
-    margin-top: auto;
-    text-align: left;
-    padding-left: 0;
-    list-style: none;
-}
 
 .highlight-tag {
     background: rgba(255, 213, 79, 0.1);
