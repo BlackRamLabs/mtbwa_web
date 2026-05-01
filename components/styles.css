@@ -875,6 +875,19 @@ body {
     flex-shrink: 0;
 }
 
+.feature-card .icon-title-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.feature-card .icon-title-container .feature-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
 .feature-card .feature-description {
     flex-shrink: 0;
 }
