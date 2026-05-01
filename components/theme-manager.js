@@ -91,6 +91,13 @@ window.themeManager = new ThemeManager();
 // Also initialize when DOM is ready to ensure proper setup
 document.addEventListener('DOMContentLoaded', function() {
     if (window.themeManager) {
+        // Ensure proper initial state by checking current theme and setting toggle accordingly
+        const currentTheme = localStorage.getItem(window.themeManager.storageKey);
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const actualTheme = currentTheme || (systemPrefersDark ? 'dark' : 'light');
+        
+        // Set the correct initial state
+        window.themeManager.setTheme(actualTheme);
         window.themeManager.updateToggle();
         window.themeManager.updateLogo();
     }
