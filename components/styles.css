@@ -966,14 +966,15 @@ transition: transform 0.3s ease;
 
 /* Assessment Procedure cards - align Setting boxes to bottom */
 .assessment-procedure .features-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    align-items: stretch;
 }
 
 .assessment-procedure .feature-card {
     display: flex;
     flex-direction: column;
-    flex: 1;
     height: 100%;
 }
 
