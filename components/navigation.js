@@ -11,6 +11,20 @@ function getComponentsPath() {
     return relativePath + 'components/navigation.html';
 }
 
+// Get absolute path to components for consistent loading
+function getAbsoluteComponentsPath() {
+    const currentPath = window.location.pathname;
+    const pathSegments = currentPath.split('/').filter(segment => segment !== '');
+    const depth = pathSegments.length;
+    
+    let absolutePath = '';
+    for (let i = 0; i < depth; i++) {
+        absolutePath += '../';
+    }
+    
+    return absolutePath + 'components/navigation.html';
+}
+
 // Load navigation component
 fetch(getComponentsPath())
     .then(response => response.text())
