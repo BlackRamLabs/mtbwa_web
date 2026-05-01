@@ -255,6 +255,19 @@ nav {
     text-align: center;
 }
 
+/* Older hero sections should always use light text regardless of theme */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6,
+.hero p,
+.hero span,
+.hero div {
+    color: #ffffff !important;
+}
+
 .hero h1 {
     font-size: clamp(1.8rem, 8vw, 3.5rem);
     margin: 0 0 10px 0;
@@ -627,10 +640,26 @@ body {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Hero sections should always use light text regardless of theme */
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6,
+.hero-section p,
+.hero-section span,
+.hero-section div {
+    color: #ffffff !important;
+}
+
+.hero-section .hero-scroll-indicator span {
+    color: #ffffff !important;
 }
 
 .hero-background {

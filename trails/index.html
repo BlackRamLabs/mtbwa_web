@@ -439,6 +439,23 @@
         .text-secondary, .muted, .subtitle {
             color: var(--theme-text-secondary, #666666);
         }
+
+        /* Hero sections should always use light text regardless of theme */
+        .hero-section h1,
+        .hero-section h2,
+        .hero-section h3,
+        .hero-section h4,
+        .hero-section h5,
+        .hero-section h6,
+        .hero-section p,
+        .hero-section span,
+        .hero-section div {
+            color: #ffffff !important;
+        }
+
+        .hero-section .hero-scroll-indicator span {
+            color: #ffffff !important;
+        }
     </style>
 </head>
 
