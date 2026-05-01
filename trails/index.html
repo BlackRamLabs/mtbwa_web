@@ -64,6 +64,99 @@
         .resource-link:hover {
             text-decoration: underline;
         }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .resource-platform {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .resource-platform:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .platform-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .platform-badge {
+            background: var(--highlight-color);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .platform-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .action-btn.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .action-btn.primary:hover {
+            background: var(--primary-color);
+            opacity: 0.9;
+            transform: translateX(2px);
+        }
+        
+        .action-btn.secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .action-btn.secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(2px);
+        }
+        
+        .btn-icon {
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
@@ -133,11 +226,42 @@
         <div class="info-grid">
                     <div class="info-card">
                         <h3 class="info-title">Trail Resources</h3>
-                        <p class="info-description">Quick access to trail websites and interactive maps:</p>
-                        <ul class="resource-list">
-                            <li><strong>Trails WA.</strong> <a href="https://trailswa.com.au/trails/trail-types/mountain-bike" target="_blank" class="resource-link">Website</a>. <a href="map/trailswa.html" class="resource-link">Map</a>.</li>
-                            <li><strong>Trailforks.</strong> <a href="https://www.trailforks.com/region/western-australia/" target="_blank" class="resource-link">Website</a>. <a href="map/trailforks.html" class="resource-link">Map</a>.</li>
-                        </ul>
+                        <p class="info-description">Explore Western Australia's best trails with these premier mapping platforms:</p>
+                        <div class="resource-grid">
+                            <div class="resource-platform">
+                                <div class="platform-header">
+                                    <h4 class="platform-name">Trails WA</h4>
+                                    <span class="platform-badge">Official</span>
+                                </div>
+                                <div class="platform-actions">
+                                    <a href="https://trailswa.com.au/trails/trail-types/mountain-bike" target="_blank" class="action-btn primary">
+                                        <span class="btn-icon">🌐</span>
+                                        Visit Website
+                                    </a>
+                                    <a href="map/trailswa.html" class="action-btn secondary">
+                                        <span class="btn-icon">🗺️</span>
+                                        Interactive Map
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-platform">
+                                <div class="platform-header">
+                                    <h4 class="platform-name">Trailforks</h4>
+                                    <span class="platform-badge">Community</span>
+                                </div>
+                                <div class="platform-actions">
+                                    <a href="https://www.trailforks.com/region/western-australia/" target="_blank" class="action-btn primary">
+                                        <span class="btn-icon">🌐</span>
+                                        Visit Website
+                                    </a>
+                                    <a href="map/trailforks.html" class="action-btn secondary">
+                                        <span class="btn-icon">🗺️</span>
+                                        Interactive Map
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="info-card">
