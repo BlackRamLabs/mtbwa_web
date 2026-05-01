@@ -989,7 +989,6 @@ transition: transform 0.3s ease;
 .assessment-procedure .feature-card > div[style*="background: var(--theme-bg-secondary)"] {
     margin-top: auto;
     flex-shrink: 0;
-    align-self: flex-end;
 }
 
 .icon-wrapper {
