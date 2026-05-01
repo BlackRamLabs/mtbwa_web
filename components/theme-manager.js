@@ -59,12 +59,13 @@ class ThemeManager {
         const toggle = document.getElementById('theme-toggle');
         if (toggle) {
             const isDark = document.documentElement.classList.contains(this.darkThemeClass);
-            toggle.textContent = isDark ? '☀️' : '🌙';
-            toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+            // Show icon of the theme we will switch TO
+            toggle.textContent = isDark ? '🌙' : '☀️';
+            toggle.setAttribute('aria-label', isDark ? 'Switch to dark mode' : 'Switch to light mode');
             
-            // Update button styling classes
+            // Update button styling classes - inverted logic
             toggle.classList.remove('light-mode', 'dark-mode');
-            toggle.classList.add(isDark ? 'dark-mode' : 'light-mode');
+            toggle.classList.add(isDark ? 'light-mode' : 'dark-mode');
         }
         
         // Update logo based on theme
