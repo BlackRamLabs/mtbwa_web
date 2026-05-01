@@ -445,16 +445,16 @@
 
         /* Global text color defaults that inherit from theme variables */
         h1, h2, h3, h4, h5, h6 {
-            color: var(--theme-text-primary, #212121);
+            color: var(--theme-text-primary);
         }
 
         p, span, div, li, td, th {
-            color: var(--theme-text-primary, #212121);
+            color: var(--theme-text-primary);
         }
 
         /* Allow specific overrides for secondary text */
         .text-secondary, .muted, .subtitle {
-            color: var(--theme-text-secondary, #666666);
+            color: var(--theme-text-secondary);
         }
 
         /* Hero sections should always use light text regardless of theme */
@@ -467,11 +467,11 @@
         .hero-section p,
         .hero-section span,
         .hero-section div {
-            color: var(--hero-text-color, #ffffff) !important;
+            color: var(--hero-text-color) !important;
         }
 
         .hero-section .hero-scroll-indicator span {
-            color: var(--hero-text-color, #ffffff) !important;
+            color: var(--hero-text-color) !important;
         }
     </style>
 </head>

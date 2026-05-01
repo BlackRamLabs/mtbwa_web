@@ -608,7 +608,7 @@ main h5 {
 .content-section p {
     font-size: 15px;
     line-height: 1.4;
-    color: var(--theme-text-primary, #1a1a1a);
+    color: var(--theme-text-primary);
     margin-bottom: 20px;
 }
 
@@ -834,7 +834,7 @@ body {
 /* Features Section */
 .features-section {
     padding: 120px 0;
-    background: var(--theme-card-bg, linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%));
+    background: var(--theme-card-bg);
 }
 
 .section-header {
@@ -846,13 +846,13 @@ body {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     margin-bottom: 24px;
-    color: var(--theme-text-primary, var(--primary-color));
+    color: var(--theme-text-primary);
     line-height: 1.2;
 }
 
 .section-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: var(--theme-text-secondary, #666);
+    color: var(--theme-text-secondary);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -866,10 +866,10 @@ body {
 }
 
 .feature-card {
-    background: var(--theme-bg-primary, #ffffff);
+    background: var(--theme-bg-primary);
     padding: 32px 24px;
     border-radius: 16px;
-    box-shadow: 0 8px 32px var(--theme-shadow-light, rgba(0,0,0,0.1));
+    box-shadow: 0 8px 32px var(--theme-shadow-light);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -975,13 +975,13 @@ transition: transform 0.3s ease;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 12px;
-    color: var(--theme-text-primary, var(--primary-color));
+    color: var(--theme-text-primary);
 }
 
 .feature-description {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--theme-text-secondary, #666);
+    color: var(--theme-text-secondary);
     margin-bottom: 20px;
 }
 
@@ -995,7 +995,7 @@ transition: transform 0.3s ease;
 
 .highlight-tag {
     background: rgba(255, 213, 79, 0.1);
-    color: var(--theme-text-primary, var(--primary-color));
+    color: var(--theme-text-primary);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -1061,7 +1061,7 @@ transition: transform 0.3s ease;
     color: var(--highlight-color);
     font-size: 1.2rem;
     font-weight: 700;
-    text-shadow: 0 1px 2px var(--theme-shadow-light, rgba(0, 0, 0, 0.1));
+    text-shadow: 0 1px 2px var(--theme-shadow-light);
 }
 
 .cert-perfect-card ul {
@@ -1170,7 +1170,7 @@ transition: transform 0.3s ease;
     text-align: center;
     padding: 32px 24px;
     border-radius: 16px;
-    background: var(--theme-bg-primary, #ffffff);
+    background: var(--theme-bg-primary);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, background 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -1178,7 +1178,7 @@ transition: transform 0.3s ease;
 
 .value-item:hover {
     transform: translateY(-8px);
-    background: var(--theme-bg-primary, #ffffff);
+    background: var(--theme-bg-primary);
     box-shadow: 0 8px 12px rgba(0,0,0,0.15);
 }
 
@@ -1318,7 +1318,7 @@ transition: transform 0.3s ease;
 
 .footer-description {
     font-size: 0.55rem;
-    color: var(--theme-text-secondary, rgba(255,255,255,0.8));
+    color: var(--theme-text-secondary);
     line-height: 0.7;
 }
 
@@ -1346,7 +1346,7 @@ transition: transform 0.3s ease;
 }
 
 .footer-section a {
-    color: var(--theme-text-secondary, rgba(255,255,255,0.8));
+    color: var(--theme-text-secondary);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
