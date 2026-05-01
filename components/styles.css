@@ -134,7 +134,7 @@ nav {
 }
 
 .logo-section a {
-    color: #ffffff;
+    color: var(--theme-text-primary, #ffffff);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -152,7 +152,7 @@ nav {
 }
 
 .nav-menu > li > a {
-    color: #ffffff;
+    color: var(--theme-text-primary, #ffffff);
     text-decoration: none;
     padding: 25px 20px;
     display: block;
@@ -173,7 +173,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--theme-bg-secondary, #4f4f4e);
+    background-color: var(--theme-bg-secondary, #f8f9fa);
     min-width: 200px;
     box-shadow: 0 4px 6px var(--shadow-light);
     display: none;
@@ -184,7 +184,7 @@ nav {
 }
 
 .dropdown a {
-    color: #ffffff;
+    color: var(--theme-text-primary, #ffffff);
     text-decoration: none;
     padding: 12px 20px;
     display: block;
