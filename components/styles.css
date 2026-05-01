@@ -850,18 +850,23 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
+    align-items: start;
 }
 
 .feature-card {
-background: var(--theme-bg-primary, #ffffff);
-padding: 48px 32px;
-border-radius: 16px;
-box-shadow: 0 8px 32px var(--theme-shadow-light, rgba(0,0,0,0.1));
-text-align: center;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-position: relative;
-overflow: hidden;
+    background: var(--theme-bg-primary, #ffffff);
+    padding: 48px 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--theme-shadow-light, rgba(0,0,0,0.1));
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+
 
 .feature-card::before {
 content: '';
@@ -938,6 +943,14 @@ transition: transform 0.3s ease;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 32px;
+}
+
+/* Align unordered lists in feature cards */
+.feature-card ul {
+    margin-top: auto;
+    text-align: left;
+    padding-left: 0;
+    list-style: none;
 }
 
 .highlight-tag {
