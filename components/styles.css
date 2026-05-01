@@ -867,14 +867,6 @@ body {
     height: 100%;
 }
 
-.feature-card .feature-icon {
-    flex-shrink: 0;
-}
-
-.feature-card .feature-title {
-    flex-shrink: 0;
-}
-
 .feature-card .icon-title-container {
     display: flex;
     align-items: center;
@@ -883,7 +875,12 @@ body {
     text-align: left;
 }
 
+.feature-card .icon-title-container .feature-icon {
+    flex-shrink: 0;
+}
+
 .feature-card .icon-title-container .feature-title {
+    flex-shrink: 0;
     margin-bottom: 0;
     text-align: left;
 }
