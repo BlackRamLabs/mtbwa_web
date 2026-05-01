@@ -424,67 +424,252 @@
             });
         }
         
-        // Test function to validate tab functionality
-        function testTabFunctionality() {
-            console.log('=== TAB FUNCTIONALITY TEST ===');
-            
-            const levels = ['level0', 'level1', 'level2', 'level3', 'level4'];
-            const results = {};
-            
-            levels.forEach(level => {
-                console.log(`\nTesting ${level}:`);
-                
-                // Test if tab button exists
-                const tabButtons = document.querySelectorAll('.tab-button.' + level);
-                console.log(`  Tab buttons found: ${tabButtons.length}`);
-                
-                // Test if content div exists
-                const contentDiv = document.getElementById('cert-content-' + level);
-                console.log(`  Content div exists: ${!!contentDiv}`);
-                
-                if (contentDiv) {
-                    console.log(`  Content div classes: ${contentDiv.className}`);
-                    console.log(`  Content div display: ${contentDiv.style.display}`);
+        // Comprehensive Test Suite
+        class CertificationPageTestSuite {
+            constructor() {
+                this.results = {
+                    passed: 0,
+                    failed: 0,
+                    total: 0,
+                    details: {}
+                };
+            }
+
+            log(message, type = 'info') {
+                const styles = {
+                    info: 'color: #666',
+                    pass: 'color: #28a745; font-weight: bold',
+                    fail: 'color: #dc3545; font-weight: bold',
+                    header: 'color: #007bff; font-weight: bold; font-size: 14px'
+                };
+                console.log(`%c${message}`, styles[type]);
+            }
+
+            assert(condition, testName, description) {
+                this.results.total++;
+                if (condition) {
+                    this.results.passed++;
+                    this.results.details[testName] = { status: 'PASS', description };
+                    this.log(`✓ PASS: ${testName}`, 'pass');
+                } else {
+                    this.results.failed++;
+                    this.results.details[testName] = { status: 'FAIL', description };
+                    this.log(`✗ FAIL: ${testName} - ${description}`, 'fail');
                 }
+            }
+
+            // Test Navigation Bar
+            testNavigationBar() {
+                this.log('\n=== NAVIGATION BAR TESTS ===', 'header');
                 
-                // Test switching to this level
-                showCertTab(level);
+                // Test navigation exists
+                const nav = document.querySelector('nav');
+                this.assert(nav, 'nav_exists', 'Navigation bar should exist');
                 
-                // Check if content is now visible
-                const isVisible = contentDiv && contentDiv.style.display === 'block';
-                console.log(`  Content visible after switch: ${isVisible}`);
+                // Test navigation links
+                const navLinks = document.querySelectorAll('nav a');
+                this.assert(navLinks.length > 0, 'nav_links_exist', 'Navigation should have links');
                 
-                // Check if tabs are highlighted
-                const highlightedTabs = document.querySelectorAll('.tab-button.' + level);
-                let highlightedCount = 0;
-                highlightedTabs.forEach(tab => {
-                    if (tab.style.background === 'var(--highlight-color)') {
-                        highlightedCount++;
+                // Test MTBWA branding
+                const branding = document.querySelector('.logo');
+                this.assert(branding, 'branding_exists', 'MTBWA branding should exist');
+            }
+
+            // Test Page Structure
+            testPageStructure() {
+                this.log('\n=== PAGE STRUCTURE TESTS ===', 'header');
+                
+                // Test main sections
+                const hero = document.querySelector('.hero-section');
+                this.assert(hero, 'hero_section_exists', 'Hero section should exist');
+                
+                const features = document.querySelector('.features-section');
+                this.assert(features, 'features_section_exists', 'Features section should exist');
+                
+                // Test containers
+                const containers = document.querySelectorAll('.container');
+                this.assert(containers.length > 0, 'containers_exist', 'Page should have containers');
+                
+                // Test footer
+                const footer = document.querySelector('footer');
+                this.assert(footer, 'footer_exists', 'Footer should exist');
+            }
+
+            // Test Tab Functionality
+            testTabFunctionality() {
+                this.log('\n=== TAB FUNCTIONALITY TESTS ===', 'header');
+                
+                const levels = ['level0', 'level1', 'level2', 'level3', 'level4'];
+                
+                levels.forEach(level => {
+                    // Test tab buttons exist
+                    const tabButtons = document.querySelectorAll('.tab-button.' + level);
+                    this.assert(tabButtons.length > 0, `tab_buttons_${level}`, `Tab buttons for ${level} should exist`);
+                    
+                    // Test content div exists
+                    const contentDiv = document.getElementById('cert-content-' + level);
+                    this.assert(contentDiv, `content_div_${level}`, `Content div for ${level} should exist`);
+                    
+                    if (contentDiv) {
+                        // Test tab switching
+                        showCertTab(level);
+                        const isVisible = contentDiv.style.display === 'block';
+                        this.assert(isVisible, `tab_switch_${level}`, `Content for ${level} should be visible when tab is clicked`);
+                        
+                        // Test tab highlighting
+                        const highlightedTabs = document.querySelectorAll('.tab-button.' + level);
+                        let highlightedCount = 0;
+                        highlightedTabs.forEach(tab => {
+                            if (tab.style.background === 'var(--highlight-color)') {
+                                highlightedCount++;
+                            }
+                        });
+                        this.assert(highlightedCount === highlightedTabs.length, `tab_highlight_${level}`, `Tabs for ${level} should be highlighted when active`);
                     }
                 });
-                console.log(`  Highlighted tabs: ${highlightedCount}/${highlightedTabs.length}`);
+            }
+
+            // Test Content Elements
+            testContentElements() {
+                this.log('\n=== CONTENT ELEMENTS TESTS ===', 'header');
                 
-                results[level] = {
-                    tabButtons: tabButtons.length,
-                    contentExists: !!contentDiv,
-                    contentVisible: isVisible,
-                    tabsHighlighted: highlightedCount === highlightedTabs.length
-                };
-            });
-            
-            console.log('\n=== TEST RESULTS ===');
-            console.table(results);
-            
-            // Return to level1
-            showCertTab('level1');
-            
-            return results;
+                // Test certification types
+                const certTypes = document.querySelector('.cert-key');
+                this.assert(certTypes, 'cert_types_exists', 'Certification types section should exist');
+                
+                // Test provider section
+                const providerSection = document.querySelector('.provider-section');
+                this.assert(providerSection, 'provider_section_exists', 'Provider section should exist');
+                
+                // Test CTA section
+                const ctaSection = document.querySelector('.cta-section');
+                this.assert(ctaSection, 'cta_section_exists', 'CTA section should exist');
+                
+                // Test feature cards
+                const featureCards = document.querySelectorAll('.feature-card');
+                this.assert(featureCards.length > 0, 'feature_cards_exist', 'Page should have feature cards');
+            }
+
+            // Test Responsive Design
+            testResponsiveDesign() {
+                this.log('\n=== RESPONSIVE DESIGN TESTS ===', 'header');
+                
+                // Test viewport meta tag
+                const viewportMeta = document.querySelector('meta[name="viewport"]');
+                this.assert(viewportMeta, 'viewport_meta', 'Viewport meta tag should exist');
+                
+                // Test CSS variables
+                const rootStyle = getComputedStyle(document.documentElement);
+                const primaryColor = rootStyle.getPropertyValue('--primary-color');
+                this.assert(primaryColor, 'css_variables', 'CSS variables should be defined');
+            }
+
+            // Test Interactive Elements
+            testInteractiveElements() {
+                this.log('\n=== INTERACTIVE ELEMENTS TESTS ===', 'header');
+                
+                // Test buttons
+                const buttons = document.querySelectorAll('button');
+                this.assert(buttons.length > 0, 'buttons_exist', 'Page should have buttons');
+                
+                // Test links
+                const links = document.querySelectorAll('a');
+                this.assert(links.length > 0, 'links_exist', 'Page should have links');
+                
+                // Test certification tags
+                const certTags = document.querySelectorAll('.cert-tag');
+                this.assert(certTags.length > 0, 'cert_tags_exist', 'Page should have certification tags');
+            }
+
+            // Test Animations and AOS
+            testAnimations() {
+                this.log('\n=== ANIMATIONS TESTS ===', 'header');
+                
+                // Test AOS library loaded
+                const aosLoaded = typeof AOS !== 'undefined';
+                this.assert(aosLoaded, 'aos_loaded', 'AOS library should be loaded');
+                
+                if (aosLoaded) {
+                    // Test AOS elements
+                    const aosElements = document.querySelectorAll('[data-aos]');
+                    this.assert(aosElements.length > 0, 'aos_elements', 'Page should have AOS elements');
+                }
+            }
+
+            // Test Accessibility
+            testAccessibility() {
+                this.log('\n=== ACCESSIBILITY TESTS ===', 'header');
+                
+                // Test alt text for images
+                const images = document.querySelectorAll('img');
+                let imagesWithAlt = 0;
+                images.forEach(img => {
+                    if (img.alt) imagesWithAlt++;
+                });
+                this.assert(imagesWithAlt === images.length, 'image_alt_text', 'All images should have alt text');
+                
+                // Test heading hierarchy
+                const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                this.assert(headings.length > 0, 'headings_exist', 'Page should have headings');
+            }
+
+            // Run all tests
+            runAllTests() {
+                this.log('🧪 CERTIFICATION PAGE TEST SUITE', 'header');
+                this.log('=====================================', 'header');
+                
+                this.testNavigationBar();
+                this.testPageStructure();
+                this.testTabFunctionality();
+                this.testContentElements();
+                this.testResponsiveDesign();
+                this.testInteractiveElements();
+                this.testAnimations();
+                this.testAccessibility();
+                
+                this.printResults();
+                
+                return this.results;
+            }
+
+            // Print results summary
+            printResults() {
+                this.log('\n📊 TEST RESULTS SUMMARY', 'header');
+                this.log('=====================================', 'header');
+                
+                const passRate = ((this.results.passed / this.results.total) * 100).toFixed(1);
+                
+                this.log(`Total Tests: ${this.results.total}`, 'info');
+                this.log(`Passed: ${this.results.passed}`, 'pass');
+                this.log(`Failed: ${this.results.failed}`, this.results.length > 0 ? 'fail' : 'info');
+                this.log(`Success Rate: ${passRate}%`, passRate >= 90 ? 'pass' : 'fail');
+                
+                // Show failed tests if any
+                if (this.results.failed > 0) {
+                    this.log('\n❌ FAILED TESTS:', 'fail');
+                    Object.entries(this.results.details).forEach(([name, result]) => {
+                        if (result.status === 'FAIL') {
+                            this.log(`  - ${name}: ${result.description}`, 'fail');
+                        }
+                    });
+                }
+                
+                // Show overall status
+                const overallStatus = this.results.failed === 0 ? '🎉 ALL TESTS PASSED!' : '⚠️  SOME TESTS FAILED';
+                this.log(`\n${overallStatus}`, this.results.failed === 0 ? 'pass' : 'fail');
+            }
+        }
+
+        // Global test function
+        function runCertificationTests() {
+            const testSuite = new CertificationPageTestSuite();
+            return testSuite.runAllTests();
         }
         
-        // Run test on page load
+        // Run comprehensive test suite on page load
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                testTabFunctionality();
+                runCertificationTests();
             }, 1000);
         });
         
