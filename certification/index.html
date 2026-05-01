@@ -603,6 +603,9 @@
                         this.assert(highlightedCount === highlightedTabs.length, `tab_highlight_${level}`, `Tabs for ${level} should be highlighted when active`);
                     }
                 });
+                
+                // Reset to Level 1 after testing to maintain default state
+                showCertTab('level1');
             }
 
             // Test Default Tab State
