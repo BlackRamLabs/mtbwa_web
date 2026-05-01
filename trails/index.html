@@ -13,6 +13,45 @@
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* CSS Custom Properties for Theme System */
+        :root {
+            /* Light Theme (Default) */
+            --theme-bg-primary: #ffffff;
+            --theme-bg-secondary: #f8f9fa;
+            --theme-bg-tertiary: #e9ecef;
+            --theme-text-primary: #212121;
+            --theme-text-secondary: #666666;
+            --theme-text-muted: #999999;
+            --theme-border-color: #e9ecef;
+            --theme-shadow-light: rgba(0, 0, 0, 0.1);
+            --theme-shadow-medium: rgba(0, 0, 0, 0.15);
+            --theme-card-bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            --theme-warning-bg: #fff3cd;
+            --theme-warning-border: #ffeaa7;
+            --theme-warning-text: #856404;
+            --theme-warning-text-strong: #664d03;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark Theme */
+                --theme-bg-primary: #1a1a1a;
+                --theme-bg-secondary: #2d2d2d;
+                --theme-bg-tertiary: #404040;
+                --theme-text-primary: #ffffff;
+                --theme-text-secondary: #cccccc;
+                --theme-text-muted: #999999;
+                --theme-border-color: #404040;
+                --theme-shadow-light: rgba(0, 0, 0, 0.3);
+                --theme-shadow-medium: rgba(0, 0, 0, 0.5);
+                --theme-card-bg: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+                --theme-warning-bg: #3d2f00;
+                --theme-warning-border: #5d4400;
+                --theme-warning-text: #d4a000;
+                --theme-warning-text-strong: #e6b800;
+            }
+        }
+
         .trail-links {
             grid-template-columns: 1fr;
         }
@@ -25,21 +64,21 @@
         }
 
         .info-card {
-            background: #f8f9fa;
+            background: var(--theme-bg-secondary);
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 2px 4px var(--theme-shadow-light);
         }
 
         .info-title {
             color: var(--primary-color);
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 15px;
         }
 
         .info-description {
-            color: #666;
+            color: var(--theme-text-secondary);
             margin-bottom: 20px;
         }
 
@@ -52,7 +91,7 @@
         .resource-list li,
         .safety-list li {
             padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--theme-border-color);
         }
 
         .resource-list li:last-child,
@@ -78,17 +117,17 @@
         }
 
         .resource-platform {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border: 1px solid #e9ecef;
+            background: var(--theme-card-bg);
+            border: 1px solid var(--theme-border-color);
             border-radius: 12px;
             padding: 20px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px var(--theme-shadow-light);
         }
 
         .resource-platform:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 16px var(--theme-shadow-medium);
         }
 
         .platform-header {
@@ -183,12 +222,13 @@
         
         .form-input, .form-textarea {
             padding: 12px 16px;
-            border: 2px solid #e9ecef;
+            border: 2px solid var(--theme-border-color);
             border-radius: 8px;
             font-size: 1rem;
             font-family: inherit;
             transition: all 0.3s ease;
-            background: white;
+            background: var(--theme-bg-primary);
+            color: var(--theme-text-primary);
         }
         
         .form-input:focus, .form-textarea:focus {
@@ -235,8 +275,8 @@
         }
         
         .form-note {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
+            background: var(--theme-warning-bg);
+            border: 1px solid var(--theme-warning-border);
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 20px;
@@ -244,13 +284,13 @@
         
         .form-note p {
             margin: 0;
-            color: #856404;
+            color: var(--theme-warning-text);
             font-size: 0.9rem;
             line-height: 1.5;
         }
         
         .form-note strong {
-            color: #664d03;
+            color: var(--theme-warning-text-strong);
         }
         
         .checkbox-group {
@@ -275,7 +315,7 @@
         }
         
         .checkbox-text {
-            color: #666;
+            color: var(--theme-text-secondary);
             flex: 1;
         }
         
@@ -290,7 +330,7 @@
         
         .area-list li {
             padding: 6px 0;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid var(--theme-border-color);
             font-size: 0.9rem;
         }
         
