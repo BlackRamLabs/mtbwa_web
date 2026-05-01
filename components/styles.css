@@ -1197,13 +1197,13 @@ transition: transform 0.3s ease;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #ffffff;
+    color: var(--theme-text-primary, #212121);
 }
 
 .value-description {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: rgba(255,255,255,0.8);
+    color: var(--theme-text-secondary, #666666);
 }
 
 /* CTA Section */
