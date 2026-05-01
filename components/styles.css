@@ -850,7 +850,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .feature-card {
@@ -862,20 +862,34 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
     height: 100%;
 }
 
-.feature-card > *:not(ul) {
-    flex-shrink: 0;
+.feature-card .feature-icon {
+    grid-row: 1;
+}
+
+.feature-card .feature-title {
+    grid-row: 2;
+}
+
+.feature-card .feature-description {
+    grid-row: 3;
+}
+
+.feature-card .feature-highlights {
+    grid-row: 4;
 }
 
 .feature-card ul {
-    margin-top: auto;
+    grid-row: 5;
+    align-self: end;
     text-align: left;
     padding-left: 0;
     list-style: none;
+    margin-top: 16px;
 }
 
 
