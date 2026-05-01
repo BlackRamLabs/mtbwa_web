@@ -677,7 +677,7 @@ main h5 {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: var(--primary-color);
+    color: var(--theme-text-primary);
 }
 
 /* Container */
@@ -1229,12 +1229,12 @@ transition: transform 0.3s ease;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 900;
     margin-bottom: 24px;
-    color: var(--primary-color);
+    color: var(--theme-text-primary);
 }
 
 .cta-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: var(--primary-color);
+    color: var(--theme-text-primary);
     max-width: 600px;
     margin: 0 auto 48px;
     line-height: 1.6;
@@ -1249,8 +1249,8 @@ transition: transform 0.3s ease;
 }
 
 .cta-section .cta-button.primary {
-    background: var(--primary-color);
-    color: var(--hero-text-color) !important;
+    background: var(--highlight-color);
+    color: var(--theme-text-primary) !important;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     font-weight: 600;
     text-decoration: none;
@@ -1271,8 +1271,8 @@ transition: transform 0.3s ease;
 
 .cta-section .cta-button.secondary {
     background: rgba(255,255,255,0.2);
-    color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color);
+    color: var(--highlight-color) !important;
+    border: 2px solid var(--highlight-color);
     backdrop-filter: blur(10px);
     font-weight: 600;
     text-decoration: none;
