@@ -33,8 +33,8 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            :root {
-                /* Dark Theme */
+            :root:not(.dark-theme):not(.light-theme) {
+                /* Dark Theme - only apply when no manual theme is set */
                 --theme-bg-primary: #1a1a1a;
                 --theme-bg-secondary: #2d2d2d;
                 --theme-bg-tertiary: #404040;
@@ -68,6 +68,23 @@
             --theme-warning-border: #5d4400;
             --theme-warning-text: #d4a000;
             --theme-warning-text-strong: #e6b800;
+        }
+
+        :root.light-theme {
+            --theme-bg-primary: #ffffff;
+            --theme-bg-secondary: #f8f9fa;
+            --theme-bg-tertiary: #e9ecef;
+            --theme-text-primary: #212121;
+            --theme-text-secondary: #666666;
+            --theme-text-muted: #999999;
+            --theme-border-color: #e9ecef;
+            --theme-shadow-light: rgba(0, 0, 0, 0.1);
+            --theme-shadow-medium: rgba(0, 0, 0, 0.15);
+            --theme-card-bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            --theme-warning-bg: #fff3cd;
+            --theme-warning-border: #ffeaa7;
+            --theme-warning-text: #856404;
+            --theme-warning-text-strong: #664d03;
         }
 
         .trail-links {

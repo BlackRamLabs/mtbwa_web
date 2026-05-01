@@ -33,12 +33,15 @@ class ThemeManager {
         
         if (theme === 'dark') {
             root.classList.add(this.darkThemeClass);
+            root.classList.remove('light-theme');
         } else {
             root.classList.remove(this.darkThemeClass);
+            root.classList.add('light-theme');
         }
 
         console.log('Updated classes:', root.className);
         console.log('Has dark theme class:', root.classList.contains(this.darkThemeClass));
+        console.log('Has light theme class:', root.classList.contains('light-theme'));
 
         this.updateToggle();
     }
