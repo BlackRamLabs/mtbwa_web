@@ -68,6 +68,11 @@ a:hover {
     border-bottom-color: var(--link-color, #1565c0);
 }
 
+/* Community list items */
+.community-list li {
+    color: var(--theme-text-primary);
+}
+
 /* Buttons should not inherit link colors */
 .trail-link,
 .cta-button {
