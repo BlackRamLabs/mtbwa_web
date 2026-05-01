@@ -424,6 +424,70 @@
             });
         }
         
+        // Test function to validate tab functionality
+        function testTabFunctionality() {
+            console.log('=== TAB FUNCTIONALITY TEST ===');
+            
+            const levels = ['level0', 'level1', 'level2', 'level3', 'level4'];
+            const results = {};
+            
+            levels.forEach(level => {
+                console.log(`\nTesting ${level}:`);
+                
+                // Test if tab button exists
+                const tabButtons = document.querySelectorAll('.tab-button.' + level);
+                console.log(`  Tab buttons found: ${tabButtons.length}`);
+                
+                // Test if content div exists
+                const contentDiv = document.getElementById('cert-content-' + level);
+                console.log(`  Content div exists: ${!!contentDiv}`);
+                
+                if (contentDiv) {
+                    console.log(`  Content div classes: ${contentDiv.className}`);
+                    console.log(`  Content div display: ${contentDiv.style.display}`);
+                }
+                
+                // Test switching to this level
+                showCertTab(level);
+                
+                // Check if content is now visible
+                const isVisible = contentDiv && contentDiv.style.display === 'block';
+                console.log(`  Content visible after switch: ${isVisible}`);
+                
+                // Check if tabs are highlighted
+                const highlightedTabs = document.querySelectorAll('.tab-button.' + level);
+                let highlightedCount = 0;
+                highlightedTabs.forEach(tab => {
+                    if (tab.style.background === 'var(--highlight-color)') {
+                        highlightedCount++;
+                    }
+                });
+                console.log(`  Highlighted tabs: ${highlightedCount}/${highlightedTabs.length}`);
+                
+                results[level] = {
+                    tabButtons: tabButtons.length,
+                    contentExists: !!contentDiv,
+                    contentVisible: isVisible,
+                    tabsHighlighted: highlightedCount === highlightedTabs.length
+                };
+            });
+            
+            console.log('\n=== TEST RESULTS ===');
+            console.table(results);
+            
+            // Return to level1
+            showCertTab('level1');
+            
+            return results;
+        }
+        
+        // Run test on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                testTabFunctionality();
+            }, 1000);
+        });
+        
         // Initialize with level1 tab
         showCertTab('level1');
     </script>
