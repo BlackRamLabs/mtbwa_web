@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const depth = (path.match(/\//g) || []).length - 1;
         
         // Handle different directory levels
-        if (path.includes('/certification/') || path.includes('/trails/') || path.includes('/community/')) {
+        if (path.includes('/trails/map/')) {
+            return '../../components/';
+        } else if (path.includes('/certification/') || path.includes('/trails/') || path.includes('/community/')) {
             return '../components/';
         } else {
             return 'components/';
