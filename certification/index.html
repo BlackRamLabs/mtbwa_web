@@ -245,7 +245,7 @@
                     <div class="cert-level-header">
                         <div class="level-icon">🌟</div>
                         <div class="level-info">
-                            <h4>Level 0. Introduction</h4>
+                            <h4>Level 0: Introduction</h4>
                             <p>Optional starting points</p>
                         </div>
                     </div>
@@ -472,8 +472,8 @@
 
             // Reset all tabs
             document.querySelectorAll('.tab-button').forEach(tab => {
-                tab.style.background = '#f8f9fa';
-                tab.style.color = '#666';
+                tab.style.background = 'var(--theme-bg-tertiary, #f8f9fa)';
+                tab.style.color = 'var(--theme-text-primary, #212121)';
             });
 
             // Show selected content
@@ -482,7 +482,7 @@
             // Highlight all selected tabs
             document.querySelectorAll('.tab-button.' + level).forEach(tab => {
                 tab.style.background = 'var(--highlight-color)';
-                tab.style.color = 'var(--primary-color)';
+                tab.style.color = 'var(--theme-text-primary, #212121)';
             });
         }
 
