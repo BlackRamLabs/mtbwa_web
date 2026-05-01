@@ -307,7 +307,7 @@ nav {
 }
 
 .cta-button:hover {
-    background: #ffca28;
+    background: var(--highlight-color);
 }
 
 /* Grid Layout */
@@ -348,8 +348,8 @@ nav {
 
 /* Trainer Box */
 .trainer-box {
-    background: #212121;
-    color: #ffffff;
+    background: var(--theme-bg-primary, #212121);
+    color: var(--theme-text-primary, #ffffff);
     padding: 40px;
     border-radius: 8px;
     margin-top: 40px;
@@ -357,7 +357,7 @@ nav {
 
 .trainer-box h2,
 .trainer-box h3 {
-    color: #ffffff;
+    color: var(--theme-text-primary, #ffffff);
     margin-top: 30px;
 }
 
@@ -371,8 +371,8 @@ nav {
 }
 
 .cert-tag {
-    background: #212121;
-    color: #ffffff !important;
+    background: var(--theme-bg-primary, #212121);
+    color: var(--theme-text-primary, #ffffff) !important;
     padding: 8px 15px;
     border-radius: 4px;
     font-weight: bold;
@@ -391,16 +391,16 @@ nav {
 }
 
 .add-scope-tag:hover {
-    background: #ffca28;
+    background: var(--highlight-color);
 }
 
 .theory-tag {
-    background: #ffb300;
-    color: #212121;
+    background: var(--highlight-color);
+    color: var(--primary-color);
 }
 
 .theory-tag:hover {
-    background: #ff8f00;
+    background: var(--highlight-color);
 }
 
 /* Checklist Styles */
