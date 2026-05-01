@@ -62,6 +62,18 @@ class ThemeManager {
             toggle.textContent = isDark ? '☀️' : '🌙';
             toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
         }
+        
+        // Update logo based on theme
+        this.updateLogo();
+    }
+
+    updateLogo() {
+        const logo = document.querySelector('.logo-image');
+        if (logo) {
+            const isDark = document.documentElement.classList.contains(this.darkThemeClass);
+            const logoPath = isDark ? '/assets/images/MTBWA_logo[light].png' : '/assets/images/MTBWA_logo.png';
+            logo.src = logoPath;
+        }
     }
 }
 
@@ -72,5 +84,6 @@ window.themeManager = new ThemeManager();
 document.addEventListener('DOMContentLoaded', function() {
     if (window.themeManager) {
         window.themeManager.updateToggle();
+        window.themeManager.updateLogo();
     }
 });
