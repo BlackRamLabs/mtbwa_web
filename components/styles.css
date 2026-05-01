@@ -22,8 +22,8 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    color: #212121;
-    background-color: #f5f2f0;
+    color: var(--theme-text-primary, #212121);
+    background-color: var(--theme-bg-primary, #f5f2f0);
     line-height: 1.6;
 }
 
@@ -81,7 +81,7 @@ a:hover {
 
 /* Navigation */
 header {
-    background-color: #4f4f4e;
+    background-color: var(--theme-bg-secondary, #4f4f4e);
     padding: 0;
     position: sticky;
     top: 0;
@@ -154,7 +154,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #4f4f4e;
+    background-color: var(--theme-bg-secondary, #4f4f4e);
     min-width: 200px;
     box-shadow: 0 4px 6px var(--shadow-light);
     display: none;
@@ -288,7 +288,7 @@ nav {
 }
 
 .card {
-    background: #f4f4f4;
+    background: var(--theme-bg-secondary, #f4f4f4);
     padding: 25px;
     border-radius: 8px;
     border-bottom: 3px solid var(--highlight-color);
@@ -450,13 +450,13 @@ main h1 {
 .subtitle {
     font-size: 16px;
     font-weight: 300;
-    color: #666666;
+    color: var(--theme-text-secondary, #666666);
     margin-bottom: 40px;
     font-style: italic;
 }
 
 .content-section {
-    background-color: #ffffff;
+    background-color: var(--theme-bg-primary, #ffffff);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 8px var(--shadow-light);
@@ -733,7 +733,7 @@ body {
 /* Features Section */
 .features-section {
     padding: 120px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: var(--theme-card-bg, linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%));
 }
 
 .section-header {
@@ -751,7 +751,7 @@ body {
 
 .section-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: #666;
+    color: var(--theme-text-secondary, #666);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -759,22 +759,30 @@ body {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
 }
 
 .feature-card {
-    background: #ffffff;
-    padding: 48px 32px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+background: var(--theme-bg-primary, #ffffff);
+padding: 48px 32px;
+border-radius: 16px;
+box-shadow: 0 8px 32px var(--theme-shadow-light, rgba(0,0,0,0.1));
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+overflow: hidden;
 }
 
 .feature-card::before {
-    content: '';
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 4px;
+background: linear-gradient(90deg, var(--highlight-color), #ffeb3b);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.3s ease;
     position: absolute;
     top: 0;
     left: 0;
