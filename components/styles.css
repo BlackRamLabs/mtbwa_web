@@ -12,6 +12,46 @@
     --white-transparent: rgba(255, 255, 255, 0.1);
     --white-transparent-border: rgba(255, 255, 255, 0.1);
     --black-transparent: rgba(0, 0, 0, 0.1);
+    
+    /* Theme variables */
+    --theme-bg-primary: #ffffff;
+    --theme-bg-secondary: #f8f9fa;
+    --theme-bg-tertiary: #e9ecef;
+    --theme-text-primary: #212121;
+    --theme-text-secondary: #666666;
+    --theme-text-muted: #999999;
+    --theme-border-color: #e9ecef;
+    --theme-shadow-light: rgba(0, 0, 0, 0.1);
+    --theme-shadow-medium: rgba(0, 0, 0, 0.15);
+    --theme-card-bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Dark theme variables */
+:root.dark-theme {
+    --theme-bg-primary: #1a1a1a;
+    --theme-bg-secondary: #2d2d2d;
+    --theme-bg-tertiary: #404040;
+    --theme-text-primary: #ffffff;
+    --theme-text-secondary: #cccccc;
+    --theme-text-muted: #999999;
+    --theme-border-color: #404040;
+    --theme-shadow-light: rgba(0, 0, 0, 0.3);
+    --theme-shadow-medium: rgba(0, 0, 0, 0.5);
+    --theme-card-bg: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+/* Light theme variables */
+:root.light-theme {
+    --theme-bg-primary: #ffffff;
+    --theme-bg-secondary: #f8f9fa;
+    --theme-bg-tertiary: #e9ecef;
+    --theme-text-primary: #212121;
+    --theme-text-secondary: #666666;
+    --theme-text-muted: #999999;
+    --theme-border-color: #e9ecef;
+    --theme-shadow-light: rgba(0, 0, 0, 0.1);
+    --theme-shadow-medium: rgba(0, 0, 0, 0.15);
+    --theme-card-bg: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
 * {
