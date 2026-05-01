@@ -56,7 +56,12 @@ class ThemeManager {
     }
 }
 
-// Initialize theme manager when DOM is ready
+// Initialize theme manager immediately
+window.themeManager = new ThemeManager();
+
+// Also initialize when DOM is ready to ensure proper setup
 document.addEventListener('DOMContentLoaded', function() {
-    window.themeManager = new ThemeManager();
+    if (window.themeManager) {
+        window.themeManager.updateToggle();
+    }
 });
