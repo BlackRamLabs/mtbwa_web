@@ -15,18 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Load footer component
+    // Load theme manager first, then footer component
     const componentsPath = getComponentsPath();
     const footerPlaceholder = document.getElementById('footer-placeholder');
     
     if (footerPlaceholder) {
-        fetch(componentsPath + 'footer.html')
-            .then(response => response.text())
-            .then(html => {
-                footerPlaceholder.innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading footer component:', error);
-            });
+        // Load theme manager script synchronously first
+        const themeManagerScript = document.createElement('script');
+        themeManagerScript.src = componentsPath + 'theme-manager.js';
+        themeManagerScript.onload = function() {
+            // After theme manager loads, load footer HTML
+            fetch(componentsPath + 'footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    footerPlaceholder.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading footer component:', error);
+                });
+        };
+        themeManagerScript.onerror = function() {
+            console.error('Error loading theme manager script');
+        };
+        document.head.appendChild(themeManagerScript);
     }
 });
