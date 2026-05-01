@@ -426,7 +426,7 @@ nav {
     background: var(--theme-bg-primary);
     color: var(--theme-text-primary) !important;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
