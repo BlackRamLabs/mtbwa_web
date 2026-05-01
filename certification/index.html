@@ -621,13 +621,15 @@
                 this.log('\n=== CONTENT ELEMENTS TESTS ===', 'header');
 
                 // Test certification types (in feature card)
-                const certTypesTitle = document.querySelector('.feature-title');
-                const hasCertTypes = certTypesTitle && certTypesTitle.textContent.trim() === 'Understanding Certification Types';
+                const certTypesTitles = document.querySelectorAll('.feature-title');
+                const hasCertTypes = Array.from(certTypesTitles).some(title => 
+                    title.textContent.trim() === 'Understanding Certification Types');
                 this.assert(hasCertTypes, 'cert_types_exists', 'Certification types section should exist');
 
                 // Test provider section (in info-card)
-                const providerTitle = document.querySelector('.info-title');
-                const hasProviderSection = providerTitle && providerTitle.textContent.trim() === 'Provide Certifications';
+                const providerTitles = document.querySelectorAll('.info-title');
+                const hasProviderSection = Array.from(providerTitles).some(title => 
+                    title.textContent.trim() === 'Provide Certifications');
                 this.assert(hasProviderSection, 'provider_section_exists', 'Provider section should exist');
 
                 // Test CTA section
