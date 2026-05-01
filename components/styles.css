@@ -74,34 +74,34 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    color: var(--theme-text-primary, #212121);
-    background-color: var(--theme-bg-primary, #f5f2f0);
+    color: var(--theme-text-primary);
+    background-color: var(--theme-bg-primary);
     line-height: 1.6;
 }
 
 /* Global text color defaults that inherit from theme variables */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 p, span, div, li, td, th {
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 /* Allow specific overrides for secondary text */
 .text-secondary, .muted, .subtitle {
-    color: var(--theme-text-secondary, #666666);
+    color: var(--theme-text-secondary);
 }
 
 /* Global Link Styles */
 a {
-    color: var(--link-color, #1976d2);
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: var(--link-hover-color, #1565c0);
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
@@ -109,19 +109,19 @@ a:hover {
 .hero a,
 .trainer-box a,
 .cert-tag a {
-    color: var(--link-color, #64b5f6) !important;
+    color: var(--link-color) !important;
 }
 
 .hero a:hover,
 .trainer-box a:hover,
 .cert-tag a:hover {
-    color: var(--link-hover-color, #90caf9) !important;
+    color: var(--link-hover-color) !important;
 }
 
 /* Links in content sections */
 .content-section a,
 .community-list a {
-    color: var(--link-color, #1976d2);
+    color: var(--link-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
@@ -129,9 +129,9 @@ a:hover {
 
 .content-section a:hover,
 .community-list a:hover {
-    color: var(--link-color, #1565c0);
+    color: var(--link-color);
     text-decoration: none;
-    border-bottom-color: var(--link-color, #1565c0);
+    border-bottom-color: var(--link-color);
 }
 
 /* Community list items */
@@ -152,7 +152,7 @@ a:hover {
 
 /* Navigation */
 header {
-    background-color: var(--theme-bg-secondary, #f8f9fa);
+    background-color: var(--theme-bg-secondary);
     padding: 0;
     position: sticky;
     top: 0;
@@ -186,7 +186,7 @@ nav {
 }
 
 .logo-section a {
-    color: var(--theme-text-primary, #ffffff);
+    color: var(--theme-text-primary);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -204,7 +204,7 @@ nav {
 }
 
 .nav-menu > li > a {
-    color: var(--theme-text-primary, #ffffff);
+    color: var(--theme-text-primary);
     text-decoration: none;
     padding: 25px 20px;
     display: block;
@@ -213,7 +213,7 @@ nav {
 }
 
 .nav-menu > li > a:hover {
-    background-color: var(--theme-bg-tertiary, rgba(0, 0, 0, 0.05));
+    background-color: var(--theme-bg-tertiary);
 }
 
 .nav-menu > li > a[aria-current="true"] {
@@ -225,7 +225,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--theme-bg-secondary, #f8f9fa);
+    background-color: var(--theme-bg-secondary);
     min-width: 200px;
     box-shadow: 0 4px 6px var(--shadow-light);
     display: none;
@@ -236,7 +236,7 @@ nav {
 }
 
 .dropdown a {
-    color: var(--theme-text-primary, #ffffff);
+    color: var(--theme-text-primary);
     text-decoration: none;
     padding: 12px 20px;
     display: block;
@@ -244,7 +244,7 @@ nav {
 }
 
 .dropdown a:hover {
-    background-color: var(--theme-bg-tertiary, rgba(0, 0, 0, 0.05));
+    background-color: var(--theme-bg-tertiary);
 }
 
 .nav-menu li:hover .dropdown {
@@ -290,7 +290,7 @@ nav {
 }
 
 .section h2 {
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     font-size: 2rem;
     border-left: 5px solid var(--highlight-color);
     padding-left: 15px;
@@ -302,7 +302,7 @@ nav {
     background: linear-gradient(var(--shadow-medium), var(--shadow-medium)), url('https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?auto=format&fit=crop&q=80&w=1200');
     background-size: cover;
     background-position: center;
-    color: var(--hero-text-color, #ffffff);
+    color: var(--hero-text-color);
     padding: clamp(40px, 10vw, 80px) 20px;
     text-align: center;
 }
@@ -317,7 +317,7 @@ nav {
 .hero p,
 .hero span,
 .hero div {
-    color: var(--hero-text-color, #ffffff) !important;
+    color: var(--hero-text-color) !important;
 }
 
 .hero h1 {
@@ -350,7 +350,7 @@ nav {
 .cta-button {
     display: inline-block;
     background: var(--highlight-color);
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -372,7 +372,7 @@ nav {
 }
 
 .card {
-    background: var(--theme-bg-secondary, #f4f4f4);
+    background: var(--theme-bg-secondary);
     padding: 25px;
     border-radius: 8px;
     border-bottom: 3px solid var(--highlight-color);
@@ -390,7 +390,7 @@ nav {
 .card h3 {
     margin-top: 0;
     font-size: 1.25rem;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 .card-icon {
@@ -400,8 +400,8 @@ nav {
 
 /* Trainer Box */
 .trainer-box {
-    background: var(--theme-bg-primary, #212121);
-    color: var(--theme-text-primary, #ffffff);
+    background: var(--theme-bg-primary);
+    color: var(--theme-text-primary);
     padding: 40px;
     border-radius: 8px;
     margin-top: 40px;
@@ -409,7 +409,7 @@ nav {
 
 .trainer-box h2,
 .trainer-box h3 {
-    color: var(--theme-text-primary, #ffffff);
+    color: var(--theme-text-primary);
     margin-top: 30px;
 }
 
@@ -423,8 +423,8 @@ nav {
 }
 
 .cert-tag {
-    background: var(--theme-bg-primary, #212121);
-    color: var(--theme-text-primary, #ffffff) !important;
+    background: var(--theme-bg-primary);
+    color: var(--theme-text-primary) !important;
     padding: 8px 15px;
     border-radius: 4px;
     font-weight: bold;
@@ -473,7 +473,7 @@ ul.check-list li::before {
 }
 
 ul.check-list.negative-points li::before {
-    color: var(--error-color, #d32f2f);
+    color: var(--error-color);
 }
 
 /* Mobile Responsive */
@@ -527,20 +527,20 @@ main h1 {
     font-size: 48px;
     font-weight: 100;
     margin-bottom: 20px;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     line-height: 1.2;
 }
 
 .subtitle {
     font-size: 16px;
     font-weight: 300;
-    color: var(--theme-text-secondary, #666666);
+    color: var(--theme-text-secondary);
     margin-bottom: 40px;
     font-style: italic;
 }
 
 .content-section {
-    background-color: var(--theme-bg-primary, #ffffff);
+    background-color: var(--theme-bg-primary);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 8px var(--shadow-light);
@@ -554,7 +554,7 @@ main h2 {
     font-size: 24px;
     font-weight: 300;
     margin: 5px 0 20px 0 !important;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 .content-section h3,
@@ -563,7 +563,7 @@ main h3 {
     font-size: 20px;
     font-weight: 400;
     margin: 15px 0 15px 0 !important;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 .content-section h4,
@@ -572,7 +572,7 @@ main h4 {
     font-size: 18px;
     font-weight: 500;
     margin: 10px 0 10px 0 !important;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 .content-section h5,
@@ -581,7 +581,7 @@ main h5 {
     font-size: 16px;
     font-weight: 600;
     margin: 20px 0 10px 0 !important;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 /* Override card heading margin */
@@ -592,7 +592,7 @@ main h5 {
 /* Ensure trainer box headings stay white */
 .trainer-box h2,
 .trainer-box h3 {
-    color: var(--hero-text-color, #ffffff) !important;
+    color: var(--hero-text-color) !important;
     margin-top: 15px !important;
 }
 
@@ -635,7 +635,7 @@ main h5 {
     font-size: 48px;
     font-weight: 100;
     margin-bottom: 40px;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     line-height: 1.2;
 }
 
@@ -649,7 +649,7 @@ main h5 {
 .trail-link {
     display: block;
     background-color: var(--highlight-color);
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     padding: 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -659,7 +659,7 @@ main h5 {
 }
 
 .trail-link:hover {
-    background-color: var(--highlight-color, #ffca28);
+    background-color: var(--highlight-color);
 }
 
 /* Trails Page Mobile Responsive */
@@ -708,11 +708,11 @@ body {
 .hero-section p,
 .hero-section span,
 .hero-section div {
-    color: var(--hero-text-color, #ffffff) !important;
+    color: var(--hero-text-color) !important;
 }
 
 .hero-section .hero-scroll-indicator span {
-    color: var(--hero-text-color, #ffffff) !important;
+    color: var(--hero-text-color) !important;
 }
 
 .hero-background {
@@ -746,7 +746,7 @@ body {
     position: relative;
     z-index: 3;
     text-align: center;
-    color: var(--hero-text-color, #ffffff);
+    color: var(--hero-text-color);
     max-width: 800px;
     padding: 60px 20px 120px 20px;
     display: flex;
@@ -1029,19 +1029,19 @@ transition: transform 0.3s ease;
 
 /* Certification Page Styles */
 .cert-content-card {
-    background: var(--theme-bg-secondary, #f8f9fa);
+    background: var(--theme-bg-secondary);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
 .cert-perfect-card {
-    background: linear-gradient(135deg, var(--theme-bg-primary, #f8f9fa) 0%, var(--theme-bg-secondary, #f0f0f0) 100%);
-    color: var(--theme-text-primary, #212121);
+    background: linear-gradient(135deg, var(--theme-bg-primary) 0%, var(--theme-bg-secondary) 100%);
+    color: var(--theme-text-primary);
     padding: 24px;
     border-radius: 12px;
     border: 2px solid var(--highlight-color);
-    box-shadow: 0 4px 12px var(--theme-shadow-light, rgba(0, 0, 0, 0.1));
+    box-shadow: 0 4px 12px var(--theme-shadow-light);
     position: relative;
     overflow: hidden;
 }
@@ -1093,13 +1093,13 @@ transition: transform 0.3s ease;
 
 .cert-achievement-card h5 {
     margin: 0 0 10px 0;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     font-size: 1.1rem;
 }
 
 .cert-meaning-card {
-    background: var(--theme-bg-primary, #212121);
-    color: var(--theme-text-primary, #ffffff);
+    background: var(--theme-bg-primary);
+    color: var(--theme-text-primary);
     padding: 20px;
     border-radius: 8px;
 }
@@ -1137,7 +1137,7 @@ transition: transform 0.3s ease;
 
 .cert-level-header .level-info h4 {
     margin: 0;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
     font-size: 1.3rem;
 }
 
@@ -1147,7 +1147,7 @@ transition: transform 0.3s ease;
 }
 
 .cert-light-gray-card {
-    background: var(--theme-bg-secondary, #f8f9fa);
+    background: var(--theme-bg-secondary);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -1156,8 +1156,8 @@ transition: transform 0.3s ease;
 /* Values Section */
 .values-section {
     padding: 80px 0;
-    background: var(--theme-bg-secondary, #f0f0f0);
-    color: var(--theme-text-primary, #212121);
+    background: var(--theme-bg-secondary);
+    color: var(--theme-text-primary);
 }
 
 .values-grid {
@@ -1209,13 +1209,13 @@ transition: transform 0.3s ease;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: var(--theme-text-primary, #212121);
+    color: var(--theme-text-primary);
 }
 
 .value-description {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: var(--theme-text-secondary, #666666);
+    color: var(--theme-text-secondary);
 }
 
 /* CTA Section */
@@ -1250,7 +1250,7 @@ transition: transform 0.3s ease;
 
 .cta-section .cta-button.primary {
     background: var(--primary-color);
-    color: var(--hero-text-color, #ffffff) !important;
+    color: var(--hero-text-color) !important;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     font-weight: 600;
     text-decoration: none;
@@ -1292,8 +1292,8 @@ transition: transform 0.3s ease;
 
 /* Footer */
 .main-footer {
-    background: var(--theme-bg-secondary, var(--primary-color));
-    color: var(--theme-text-primary, #ffffff);
+    background: var(--theme-bg-secondary);
+    color: var(--theme-text-primary);
     padding: 60px 0 20px;
 }
 
@@ -1332,7 +1332,7 @@ transition: transform 0.3s ease;
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 16px;
-    color: var(--theme-text-primary, #ffffff);
+    color: var(--theme-text-primary);
 }
 
 .footer-section ul {
@@ -1385,25 +1385,25 @@ transition: transform 0.3s ease;
 
 /* Light mode button (sun icon) */
 .theme-toggle-btn.light-mode {
-    background: var(--theme-text-primary, #ffffff);
-    color: var(--theme-bg-primary, #212121);
-    border: 1px solid var(--theme-border-color, #e0e0e0);
+    background: var(--theme-text-primary);
+    color: var(--theme-bg-primary);
+    border: 1px solid var(--theme-border-color);
 }
 
 .theme-toggle-btn.light-mode:hover {
-    background: var(--theme-text-primary, #f5f5f5);
+    background: var(--theme-text-primary);
     transform: scale(1.1);
 }
 
 /* Dark mode button (moon icon) */
 .theme-toggle-btn.dark-mode {
-    background: var(--theme-text-primary, #000000);
-    color: var(--theme-bg-primary, #ffffff);
-    border: 1px solid var(--theme-border-color, #333333);
+    background: var(--theme-text-primary);
+    color: var(--theme-bg-primary);
+    border: 1px solid var(--theme-border-color);
 }
 
 .theme-toggle-btn.dark-mode:hover {
-    background: var(--theme-text-primary, #1a1a1a);
+    background: var(--theme-text-primary);
     transform: scale(1.1);
 }
 
