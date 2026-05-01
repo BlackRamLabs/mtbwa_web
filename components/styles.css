@@ -977,8 +977,8 @@ transition: transform 0.3s ease;
 /* Values Section */
 .values-section {
     padding: 80px 0;
-    background: var(--primary-color);
-    color: #ffffff;
+    background: var(--theme-bg-primary, #f8f9fa);
+    color: var(--theme-text-primary, #212121);
 }
 
 .values-grid {
