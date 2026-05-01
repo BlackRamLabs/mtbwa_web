@@ -1071,8 +1071,8 @@ transition: transform 0.3s ease;
 
 /* Footer */
 .main-footer {
-    background: var(--primary-color);
-    color: #ffffff;
+    background: var(--theme-bg-primary, var(--primary-color));
+    color: var(--theme-text-primary, #ffffff);
     padding: 60px 0 20px;
 }
 
@@ -1097,7 +1097,7 @@ transition: transform 0.3s ease;
 
 .footer-description {
     font-size: 0.55rem;
-    color: rgba(255,255,255,0.8);
+    color: var(--theme-text-secondary, rgba(255,255,255,0.8));
     line-height: 0.7;
 }
 
@@ -1111,7 +1111,7 @@ transition: transform 0.3s ease;
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #ffffff;
+    color: var(--theme-text-primary, #ffffff);
 }
 
 .footer-section ul {
@@ -1125,7 +1125,7 @@ transition: transform 0.3s ease;
 }
 
 .footer-section a {
-    color: rgba(255,255,255,0.8);
+    color: var(--theme-text-secondary, rgba(255,255,255,0.8));
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
