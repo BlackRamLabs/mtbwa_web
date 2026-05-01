@@ -190,21 +190,25 @@
             </div>
         </div>
 
-        <!-- LEVEL 0 -->
-            <div id="cert-content-level0" class="cert-tab-content" style="display: none;">
-                <div class="container">
-                    <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
-                        <!-- Level Navigation Tabs -->
-                        <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
-                            <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
-                                <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
-                                <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
-                                <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
-                                <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
-                            </div>
-                        </div>
+        <!-- Certification Levels Navigation -->
+        <div class="container">
+            <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
+                <!-- Level Navigation Tabs -->
+                <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
+                    <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
+                        <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
+                        <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
+                        <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
+                        <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
+                    </div>
+                </div>
+                
+                <!-- Level Content Container -->
+                <div id="level-content-container">
+                    <!-- LEVEL 0 Content -->
+                    <div id="cert-content-level0" class="cert-tab-content" style="display: none;">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">🌟</div>
                         <div>
@@ -230,24 +234,9 @@
                         </ul>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <!-- LEVEL 1 -->
-            <div id="cert-content-level1" class="cert-tab-content">
-                <div class="container">
-                    <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
-                        <!-- Level Navigation Tabs -->
-                        <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
-                            <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
-                                <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
-                                <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
-                                <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
-                                <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
-                            </div>
-                        </div>
+                    
+                    <!-- LEVEL 1 Content -->
+                    <div id="cert-content-level1" class="cert-tab-content">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">🔨</div>
                         <div>
@@ -304,24 +293,9 @@
                         </ul>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <!-- LEVEL 2 -->
-            <div id="cert-content-level2" class="cert-tab-content">
-                <div class="container">
-                    <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
-                        <!-- Level Navigation Tabs -->
-                        <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
-                            <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
-                                <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
-                                <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
-                                <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
-                                <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
-                            </div>
-                        </div>
+                    
+                    <!-- LEVEL 2 Content -->
+                    <div id="cert-content-level2" class="cert-tab-content">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">🔨</div>
                         <div>
@@ -350,24 +324,9 @@
                         </ul>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <!-- LEVEL 3 -->
-            <div id="cert-content-level3" class="cert-tab-content" style="display: none;">
-                <div class="container">
-                    <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
-                        <!-- Level Navigation Tabs -->
-                        <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
-                            <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
-                                <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
-                                <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
-                                <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
-                                <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
-                            </div>
-                        </div>
+                    
+                    <!-- LEVEL 3 Content -->
+                    <div id="cert-content-level3" class="cert-tab-content">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">📌</div>
                         <div>
@@ -391,24 +350,9 @@
                             <li style="margin-bottom: 8px;">You're an expert skills instructor</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <!-- LEVEL 4 -->
-            <div id="cert-content-level4" class="cert-tab-content" style="display: none;">
-                <div class="container">
-                    <div class="cert-level-card" style="background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px var(--shadow-light); border-top: 4px solid var(--highlight-color);">
-                        <!-- Level Navigation Tabs -->
-                        <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e9ecef;">
-                            <h4 style="margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.1rem;">📍 Certification Levels</h4>
-                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                <button onclick="showCertTab('level0')" class="tab-button level0" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 0: Introduction</button>
-                                <button onclick="showCertTab('level1')" class="tab-button level1" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 1: Foundations</button>
-                                <button onclick="showCertTab('level2')" class="tab-button level2" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 2: Growth</button>
-                                <button onclick="showCertTab('level3')" class="tab-button level3" style="padding: 8px 16px; background: #f8f9fa; color: #666; border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 3: Advanced</button>
-                                <button onclick="showCertTab('level4')" class="tab-button level4" style="padding: 8px 16px; background: var(--highlight-color); color: var(--primary-color); border: none; border-radius: 20px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 14px;">Level 4: Elite</button>
-                            </div>
-                        </div>
+                    
+                    <!-- LEVEL 4 Content -->
+                    <div id="cert-content-level4" class="cert-tab-content">
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 2rem; margin-right: 15px;">⚡</div>
                         <div>
