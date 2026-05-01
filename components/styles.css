@@ -966,20 +966,27 @@ transition: transform 0.3s ease;
 
 /* Assessment Procedure cards - align Setting boxes to bottom */
 .assessment-procedure .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 24px;
-    align-items: stretch;
 }
 
 .assessment-procedure .feature-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
+}
+
+.assessment-procedure .feature-card .icon-title-container {
+    flex-shrink: 0;
+}
+
+.assessment-procedure .feature-card .feature-description {
+    flex-shrink: 0;
 }
 
 .assessment-procedure .feature-card > div[style*="background: var(--theme-bg-secondary)"] {
     margin-top: auto;
+    flex-shrink: 0;
 }
 
 .icon-wrapper {
