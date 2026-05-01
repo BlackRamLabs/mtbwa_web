@@ -278,6 +278,37 @@
             color: #666;
             flex: 1;
         }
+        
+        .area-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        
+        .area-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+        }
+        
+        .area-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .area-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .area-link:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -452,10 +483,30 @@
                         <li>MTBers in WA are given a lot of freedom by the government bodies that manage the land, but
                             each individual person acting irresponsibly puts that freedom at risk. It's essential to
                             appreciate the access we're given without pushing too far.</li>
-                        <li>The Valley, Mundaring, Byford, Manning Park, Bell's Rapids, Darlington, Glen Forrest, Orange
-                            Grove, Kelmscott, Roleystone/Bedfordale, Wungong, Denmark, Exmouth, Karratha, Kalgoorlie,
-                            and all of the other unsanctioned trails around Mt Gunjin, Kalamunda, John Forrest, Margaret
-                            River, Nannup, Esperance.</li>
+                        <li><strong>Major Unsanctioned Areas:</strong>
+                            <ul class="area-list">
+                                <li><a href="#" class="area-link">The Valley</a> - Kalamunda area</li>
+                                <li><a href="#" class="area-link">Mundaring</a> - Hills region</li>
+                                <li><a href="#" class="area-link">Byford</a> - South Perth area</li>
+                                <li><a href="#" class="area-link">Manning Park</a> - South Perth</li>
+                                <li><a href="#" class="area-link">Bell's Rapids</a> - Swan Valley</li>
+                                <li><a href="#" class="area-link">Darlington</a> - Hills region</li>
+                                <li><a href="#" class="area-link">Glen Forrest</a> - Hills region</li>
+                                <li><a href="#" class="area-link">Orange Grove</a> - Mundaring</li>
+                                <li><a href="#" class="area-link">Kelmscott</a> - Armadale area</li>
+                                <li><a href="#" class="area-link">Roleystone/Bedfordale</a> - Armadale hills</li>
+                                <li><a href="#" class="area-link">Wungong</a> - Armadale area</li>
+                                <li><a href="#" class="area-link">Denmark</a> - Great Southern</li>
+                                <li><a href="#" class="area-link">Exmouth</a> - North West Cape</li>
+                                <li><a href="#" class="area-link">Karratha</a> - Pilbara region</li>
+                                <li><a href="#" class="area-link">Kalgoorlie</a> - Goldfields</li>
+                                <li><a href="#" class="area-link">Mt Gunjin trails</a> - Kalamunda network</li>
+                                <li><a href="#" class="area-link">John Forrest area</a> - Mundaring network</li>
+                                <li><a href="#" class="area-link">Margaret River</a> - South West</li>
+                                <li><a href="#" class="area-link">Nannup</a> - South West</li>
+                                <li><a href="#" class="area-link">Esperance</a> - South East</li>
+                            </ul>
+                        </li>
                         <li>These may include some of the best trails WA has to offer, but we strongly advise against
                             exploring these after you have heard about them or discovered them online. Find someone to
                             guide you, don't get out of your depth, and know how to respect the wishes of those
@@ -487,8 +538,15 @@
                     <p class="info-description">These locations have hosted racing events but are not open for public
                         riding:</p>
                     <ul class="safety-list">
-                        <li>Three Chillies Farm and Golden Grove Orchard - Chittering, Evedon Lakeside Retreat -
-                            Furguson Valley, Echidna Park - outside Geraldton, Bolinda Vale - Keysbrook.</li>
+                        <li><strong>Race-Only Venues:</strong>
+                            <ul class="area-list">
+                                <li><a href="#" class="area-link">Three Chillies Farm</a> - Chittering</li>
+                                <li><a href="#" class="area-link">Golden Grove Orchard</a> - Chittering</li>
+                                <li><a href="#" class="area-link">Evedon Lakeside Retreat</a> - Furguson Valley</li>
+                                <li><a href="#" class="area-link">Echidna Park</a> - outside Geraldton</li>
+                                <li><a href="#" class="area-link">Bolinda Vale</a> - Keysbrook</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
