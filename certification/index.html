@@ -625,6 +625,14 @@
                 // Test feature cards
                 const featureCards = document.querySelectorAll('.feature-card');
                 this.assert(featureCards.length > 0, 'feature_cards_exist', 'Page should have feature cards');
+
+                // Test MTBWA logo loading
+                const logoImages = document.querySelectorAll('img[src*="MTBWA_logo"]');
+                this.assert(logoImages.length > 0, 'mtbwa_logo_loaded', 'MTBWA logo images should load');
+
+                // Test MTBWA icon loading
+                const iconLinks = document.querySelectorAll('link[href*="MTBWA_icon"]');
+                this.assert(iconLinks.length > 0, 'mtbwa_icon_loaded', 'MTBWA icon links should load');
             }
 
             // Test Responsive Design
