@@ -964,38 +964,6 @@ transition: transform 0.3s ease;
     filter: brightness(0) saturate(100%) invert(31%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(96%) contrast(96%);
 }
 
-/* Assessment Procedure cards - align Setting boxes to bottom */
-.assessment-procedure .features-grid {
-    display: flex !important;
-    gap: 24px;
-    align-items: stretch;
-    grid-template-columns: none !important;
-}
-
-.assessment-procedure .feature-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: auto;
-}
-
-.assessment-procedure .feature-card .icon-title-container {
-    flex-shrink: 0;
-}
-
-.assessment-procedure .feature-card .feature-description {
-    flex-shrink: 0;
-}
-
-.assessment-procedure .setting-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.assessment-procedure .setting-container > div[style*="background: var(--theme-bg-secondary)"] {
-    margin-top: auto;
-}
 
 .icon-wrapper {
     width: 64px;
