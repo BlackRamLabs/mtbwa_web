@@ -68,11 +68,19 @@ class ThemeManager {
     }
 
     updateLogo() {
-        const logo = document.querySelector('.logo-image');
-        if (logo) {
-            const isDark = document.documentElement.classList.contains(this.darkThemeClass);
-            const logoPath = isDark ? '/assets/images/MTBWA_logo[light].png' : '/assets/images/MTBWA_logo.png';
-            logo.src = logoPath;
+        const isDark = document.documentElement.classList.contains(this.darkThemeClass);
+        const logoPath = isDark ? '/assets/images/MTBWA_logo[light].png' : '/assets/images/MTBWA_logo.png';
+        
+        // Update header logo
+        const headerLogo = document.querySelector('.logo-image');
+        if (headerLogo) {
+            headerLogo.src = logoPath;
+        }
+        
+        // Update footer logo
+        const footerLogo = document.querySelector('.footer-logo');
+        if (footerLogo) {
+            footerLogo.src = logoPath;
         }
     }
 }
