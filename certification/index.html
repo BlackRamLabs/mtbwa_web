@@ -632,6 +632,10 @@
                 const logoImages = [navigationLogo, footerLogo].filter(logo => logo !== null);
                 this.assert(logoImages.length > 0, 'mtbwa_logo_loaded', 'MTBWA logo images should load');
 
+                // Test if footer component is loaded
+                const footerPlaceholder = document.getElementById('footer-placeholder');
+                this.assert(footerPlaceholder, 'footer_placeholder_exists', 'Footer placeholder should exist');
+
                 // Test MTBWA icon loading
                 const iconLinks = document.querySelectorAll('link[href*="MTBWA_icon"]');
                 this.assert(iconLinks.length > 0, 'mtbwa_icon_loaded', 'MTBWA icon links should load');
