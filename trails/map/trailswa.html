@@ -32,6 +32,16 @@
             border: none;
             border-radius: 0;
         }
+        
+        /* Hide pop-ups and modals from embedded content */
+        .trails-wa-iframe::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Attempt to block common pop-up selectors */
+        .trails-wa-iframe + * {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -41,9 +51,10 @@
     <div class="full-page-container">
         <!-- TRAILS WA IFRAME START -->
         <iframe 
-            src="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=mountain-bike"
+            src="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=mountain-bike&embed=true&no_popup=true&hide_subscribe=true"
             class="trails-wa-iframe"
-            title="Trails WA Mountain Bike Trails Map">
+            title="Trails WA Mountain Bike Trails Map"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
         </iframe>
         <!-- TRAILS WA IFRAME END -->
     </div>
