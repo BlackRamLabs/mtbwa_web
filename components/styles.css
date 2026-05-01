@@ -968,12 +968,14 @@ transition: transform 0.3s ease;
 .assessment-procedure .features-grid {
     display: flex;
     gap: 24px;
+    align-items: stretch;
 }
 
 .assessment-procedure .feature-card {
     display: flex;
     flex-direction: column;
     flex: 1;
+    height: auto;
 }
 
 .assessment-procedure .feature-card .icon-title-container {
