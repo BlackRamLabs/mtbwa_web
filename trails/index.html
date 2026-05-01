@@ -232,6 +232,12 @@
         .form-actions .action-btn:hover,
         .cta-buttons .action-btn:hover {
             transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        /* Ensure no underline on any action-btn hover state */
+        .action-btn:hover {
+            text-decoration: none !important;
         }
 
         .btn-icon {
@@ -500,7 +506,7 @@
                             </div>
                             <div class="platform-actions">
                                 <a href="https://trailswa.com.au/trails/trail-types/mountain-bike" target="_blank"
-                                    class="action-btn primary">
+                                    class="action-btn secondary">
                                     <span class="btn-icon">🌐</span>
                                     Visit Website
                                 </a>
@@ -518,7 +524,7 @@
                             </div>
                             <div class="platform-actions">
                                 <a href="https://www.trailforks.com/region/western-australia/" target="_blank"
-                                    class="action-btn primary">
+                                    class="action-btn secondary">
                                     <span class="btn-icon">🌐</span>
                                     Visit Website
                                 </a>
@@ -723,12 +729,10 @@
                     resources, events, and groups to enhance your riding experience.</p>
                 <div class="cta-buttons">
                     <a href="../community/" class="action-btn primary">
-                        <span class="btn-icon">👥</span>
                         Explore Community
                     </a>
                     <a href="../certification/" class="action-btn secondary">
-                        <span class="btn-icon">🎓</span>
-                        Coach Training
+                        Become a Coach
                     </a>
                 </div>
             </div>
