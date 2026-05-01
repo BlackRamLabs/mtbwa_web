@@ -52,8 +52,8 @@
             }
         }
 
-        /* Manual theme override */
-        .dark-theme {
+        /* Manual theme override - higher specificity than media query */
+        :root.dark-theme {
             --theme-bg-primary: #1a1a1a;
             --theme-bg-secondary: #2d2d2d;
             --theme-bg-tertiary: #404040;
