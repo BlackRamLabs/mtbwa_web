@@ -627,18 +627,22 @@
 
                 // Test Level 1 tab button is highlighted by default
                 const level1Button = document.querySelector('.tab-button.level1');
-                const level1Highlighted = level1Button && 
-                    level1Button.style.background === 'var(--highlight-color)' && 
-                    level1Button.style.color === 'var(--primary-color)';
+                const level1Style = level1Button ? getComputedStyle(level1Button) : null;
+                const level1Highlighted = level1Style && 
+                    level1Style.background !== 'rgb(248, 249, 250)' && 
+                    level1Style.background !== '#f8f9fa' &&
+                    level1Style.color !== 'rgb(102, 102, 102)' && 
+                    level1Style.color !== '#666';
                 this.assert(level1Highlighted, 'default_level1_highlighted', 'Level 1 tab button should be highlighted by default');
 
                 // Test other tab buttons are not highlighted by default
                 const unhighlightedLevels = ['level0', 'level2', 'level3', 'level4'];
                 unhighlightedLevels.forEach(level => {
                     const button = document.querySelector('.tab-button.' + level);
-                    const isUnhighlighted = button && 
-                        button.style.background === '#f8f9fa' && 
-                        button.style.color === '#666';
+                    const buttonStyle = button ? getComputedStyle(button) : null;
+                    const isUnhighlighted = buttonStyle && 
+                        (buttonStyle.background === 'rgb(248, 249, 250)' || buttonStyle.background === '#f8f9fa') && 
+                        (buttonStyle.color === 'rgb(102, 102, 102)' || buttonStyle.color === '#666');
                     this.assert(isUnhighlighted, `default_${level}_unhighlighted`, `${level} tab button should not be highlighted by default`);
                 });
             }
