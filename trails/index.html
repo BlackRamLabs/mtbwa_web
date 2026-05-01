@@ -391,6 +391,101 @@
         .theme-toggle-btn:active {
             transform: translateY(0);
         }
+        
+        /* Theme Toggle Section */
+        .theme-toggle-section {
+            background: var(--theme-bg-secondary);
+            border-top: 1px solid var(--theme-border-color);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .theme-toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .theme-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .theme-title {
+            color: var(--theme-text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .theme-description {
+            color: var(--theme-text-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .theme-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .current-theme {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--theme-bg-primary);
+            border: 2px solid var(--theme-border-color);
+            border-radius: 25px;
+            font-weight: 500;
+        }
+        
+        .theme-indicator {
+            font-size: 1.2rem;
+        }
+        
+        .theme-text {
+            color: var(--theme-text-primary);
+            font-size: 0.9rem;
+        }
+        
+        .theme-toggle-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle-btn:hover {
+            background: var(--primary-color);
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .theme-toggle-btn:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .theme-toggle-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .theme-controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -698,6 +793,27 @@
         </div>
     </section>
 
+    <!-- Theme Toggle Section -->
+    <section class="theme-toggle-section">
+        <div class="container">
+            <div class="theme-toggle-container">
+                <div class="theme-info">
+                    <h3 class="theme-title">Theme Preference</h3>
+                    <p class="theme-description">Choose your preferred theme for the best viewing experience</p>
+                </div>
+                <div class="theme-controls">
+                    <div class="current-theme" id="current-theme-display">
+                        <span class="theme-indicator">🌙</span>
+                        <span class="theme-text">Dark Mode</span>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle-btn" onclick="themeManager.toggleTheme()" aria-label="Toggle theme">
+                        Switch Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Component -->
     <div id="footer-placeholder"></div>
     <script src="../components/footer.js"></script>
@@ -756,9 +872,24 @@
 
             updateToggle(theme) {
                 const toggle = document.getElementById('theme-toggle');
+                const display = document.getElementById('current-theme-display');
+                
                 if (toggle) {
-                    toggle.textContent = theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+                    toggle.textContent = 'Switch Theme';
                     toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+                }
+                
+                if (display) {
+                    const indicator = display.querySelector('.theme-indicator');
+                    const text = display.querySelector('.theme-text');
+                    
+                    if (theme === 'dark') {
+                        indicator.textContent = '🌙';
+                        text.textContent = 'Dark Mode';
+                    } else {
+                        indicator.textContent = '☀️';
+                        text.textContent = 'Light Mode';
+                    }
                 }
             }
         }
