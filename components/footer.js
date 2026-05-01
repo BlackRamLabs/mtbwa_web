@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle different directory levels
         if (path.includes('/trails/map/')) {
             return '../../components/';
-        } else if (path.includes('/certification/') || path.includes('/trails/') || path.includes('/community/')) {
+        } else if (path.includes('/certification/') || path.includes('/community/')) {
             return '../components/';
+        } else if (path.includes('/trails/')) {
+            return '../../components/';
         } else {
             return 'components/';
         }
