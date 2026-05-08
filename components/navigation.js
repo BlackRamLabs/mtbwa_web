@@ -1,32 +1,5 @@
-// Calculate correct path to components based on current directory depth
-function getComponentsPath() {
-    const path = window.location.pathname;
-    const depth = (path.match(/\//g) || []).length - 1; // Count slashes minus root
-    let relativePath = '';
-    
-    for (let i = 0; i < depth; i++) {
-        relativePath += '../';
-    }
-    
-    return relativePath + 'components/navigation.html';
-}
-
-// Get absolute path to components for consistent loading
-function getAbsoluteComponentsPath() {
-    const currentPath = window.location.pathname;
-    const pathSegments = currentPath.split('/').filter(segment => segment !== '');
-    const depth = pathSegments.length;
-    
-    let absolutePath = '';
-    for (let i = 0; i < depth; i++) {
-        absolutePath += '../';
-    }
-    
-    return absolutePath + 'components/navigation.html';
-}
-
 // Load navigation component
-fetch(getComponentsPath())
+fetch('/components/navigation.html')
     .then(response => response.text())
     .then(html => {
         document.getElementById('navigation-placeholder').innerHTML = html;
@@ -57,6 +30,13 @@ fetch(getComponentsPath())
             // Check for certification section
             if ((normalizedCurrentPath === '/certification' || normalizedCurrentPath.includes('/certification/index')) && 
                 normalizedLinkPath === '/certification') {
+                link.setAttribute('aria-current', 'true');
+                return;
+            }
+            
+            // Check for trail maintenance section
+            if ((normalizedCurrentPath === '/trail-maintenance' || normalizedCurrentPath.includes('/trail-maintenance/index')) && 
+                normalizedLinkPath === '/trail-maintenance') {
                 link.setAttribute('aria-current', 'true');
                 return;
             }
