@@ -27,16 +27,24 @@ fetch('/components/navigation.html')
                 return;
             }
             
-            // Check for certification section
-            if ((normalizedCurrentPath === '/certification' || normalizedCurrentPath.includes('/certification/index')) && 
-                normalizedLinkPath === '/certification') {
+            // Check for certifications section (main page)
+            if (normalizedCurrentPath === '/certifications' || normalizedCurrentPath.includes('/certifications/index')) {
+                if (normalizedLinkPath === '/certifications') {
+                    link.setAttribute('aria-current', 'true');
+                }
+                return;
+            }
+            
+            // Check for coach certification section
+            if ((normalizedCurrentPath === '/certifications/coach' || normalizedCurrentPath.includes('/certifications/coach/')) && 
+                normalizedLinkPath === '/certifications') {
                 link.setAttribute('aria-current', 'true');
                 return;
             }
             
             // Check for trail maintenance section
-            if ((normalizedCurrentPath === '/trail-maintenance' || normalizedCurrentPath.includes('/trail-maintenance/index')) && 
-                normalizedLinkPath === '/trail-maintenance') {
+            if ((normalizedCurrentPath === '/certifications/trail-maintenance' || normalizedCurrentPath.includes('/certifications/trail-maintenance/')) && 
+                normalizedLinkPath === '/certifications') {
                 link.setAttribute('aria-current', 'true');
                 return;
             }
