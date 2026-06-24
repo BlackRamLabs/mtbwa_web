@@ -14,7 +14,10 @@
     <script src="components/navigation.js"></script>
 
     <main>
-        <section class="hero" style="background-image: url('assets/images/404_hero.jpg'); background-size: cover; background-position: centre; background-attachment: fixed;">
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="hero-image-overlay"></div>
+            </div>
             <div class="hero-content">
                 <h1>404</h1>
                 <h2>Page Not Found</h2>
@@ -102,7 +105,6 @@
         }
         
         .helpful-links a {
-            color: var(--brmtb-black);
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.3s ease;
