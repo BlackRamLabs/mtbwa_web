@@ -9,7 +9,7 @@ class ThemeManager {
     init() {
         const savedTheme = localStorage.getItem(this.storageKey);
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
+
         if (savedTheme) {
             this.setTheme(savedTheme);
         } else {
@@ -27,10 +27,10 @@ class ThemeManager {
 
     setTheme(theme) {
         const root = document.documentElement;
-        
+
         console.log('Theme change:', theme);
         console.log('Current classes:', root.className);
-        
+
         if (theme === 'dark') {
             root.classList.add(this.darkThemeClass);
             root.classList.remove('light-theme');
@@ -47,10 +47,10 @@ class ThemeManager {
     }
 
     toggleTheme() {
-        const currentTheme = localStorage.getItem(this.storageKey) || 
+        const currentTheme = localStorage.getItem(this.storageKey) ||
             (document.documentElement.classList.contains(this.darkThemeClass) ? 'dark' : 'light');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         localStorage.setItem(this.storageKey, newTheme);
         this.setTheme(newTheme);
     }
@@ -62,12 +62,12 @@ class ThemeManager {
             // Show icon of current theme
             toggle.textContent = isDark ? '☀️' : '🌙';
             toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-            
+
             // Update button styling classes - inverted logic
             toggle.classList.remove('light-mode', 'dark-mode');
             toggle.classList.add(isDark ? 'light-mode' : 'dark-mode');
         }
-        
+
         // Update logo based on theme
         this.updateLogo();
     }
@@ -75,13 +75,13 @@ class ThemeManager {
     updateLogo() {
         const isDark = document.documentElement.classList.contains(this.darkThemeClass);
         const logoPath = isDark ? '/assets/images/MTBWA_logo[light][small].png' : '/assets/images/MTBWA_logo[small].png';
-        
+
         // Update header logo
         const headerLogo = document.querySelector('.logo-image');
         if (headerLogo) {
             headerLogo.src = logoPath;
         }
-        
+
         // Update footer logo
         const footerLogo = document.querySelector('.footer-logo');
         if (footerLogo) {
@@ -94,13 +94,13 @@ class ThemeManager {
 window.themeManager = new ThemeManager();
 
 // Also initialize when DOM is ready to ensure proper setup
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (window.themeManager) {
         // Ensure proper initial state by checking current theme and setting toggle accordingly
         const currentTheme = localStorage.getItem(window.themeManager.storageKey);
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const actualTheme = currentTheme || (systemPrefersDark ? 'dark' : 'light');
-        
+
         // Set the correct initial state
         window.themeManager.setTheme(actualTheme);
         window.themeManager.updateToggle();
