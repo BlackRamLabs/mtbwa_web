@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const path = window.location.pathname;
         const depth = (path.match(/\//g) || []).length - 1;
 
-        // Handle different directory levels
-        if (path.includes('/trails/map/')) {
-            return '../../components/';
-        } else if (path.includes('/certification/') || path.includes('/community/')) {
-            return '../components/';
-        } else if (path.includes('/trails/')) {
-            return '../../components/';
-        } else {
-            return 'components/';
-        }
+        return '/components/';
+
+        // // Handle different directory levels
+        // if (path.includes('/trails/map/')) {
+        //     return '../../components/';
+        // } else if (path.includes('/certification/') || path.includes('/community/')) {
+        //     return '../components/';
+        // } else if (path.includes('/trails/')) {
+        //     return '../../components/';
+        // } else {
+        //     return 'components/';
+        // }
     }
 
     // Load theme manager first, then footer component

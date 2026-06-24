@@ -1279,12 +1279,13 @@ body {
 
 .cta-buttons {
     display: flex;
+    padding: 10px;
     gap: 24px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.cta-section .cta-button.primary {
+.cta-button.primary {
     background: var(--theme-bg-primary);
     color: var(--theme-text-primary) !important;
     border: 2px solid var(--highlight-color);
@@ -1301,19 +1302,19 @@ body {
     transform: translateY(0);
 }
 
-.cta-section .cta-button.primary:hover {
+.cta-button.primary:hover {
     background: var(--theme-bg-primary);
     color: var(--theme-text-primary) !important;
     transform: translateY(-3px);
     box-shadow: 0 8px 16px var(--theme-shadow-medium), 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.cta-section .cta-button.primary:active {
+.cta-button.primary:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px var(--theme-shadow-light), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.cta-section .cta-button.secondary {
+.cta-button.secondary {
     background: var(--highlight-color);
     color: var(--theme-text-primary) !important;
     border: 2px solid var(--highlight-color);
@@ -1330,14 +1331,14 @@ body {
     box-shadow: 0 4px 8px var(--theme-shadow-light), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.cta-section .cta-button.secondary:hover {
+.cta-button.secondary:hover {
     background: var(--theme-bg-primary);
     color: var(--highlight-color) !important;
     transform: translateY(-3px);
     box-shadow: 0 8px 16px var(--theme-shadow-medium), 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.cta-section .cta-button.secondary:active {
+.cta-button.secondary:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px var(--theme-shadow-light), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
