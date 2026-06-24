@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | MTB WA</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Find your way back to MTB WA's services.">
+    <link rel="stylesheet" href="components/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/MTBWA_icon[small].png">
+</head>
+
+<body>
+    <div id="navigation-placeholder"></div>
+    <script src="components/navigation.js"></script>
+
+    <main>
+        <section class="hero" style="background-image: url('assets/images/404_hero.jpg'); background-size: cover; background-position: centre; background-attachment: fixed;">
+            <div class="hero-content">
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <p class="tagline">Oops! That trail doesn't exist.</p>
+                <p class="description">The page you're looking for has been moved or doesn't exist.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-icon">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="58" stroke="#184c36" stroke-width="4"/>
+                            <path d="M35 35L85 85M85 35L35 85" stroke="#184c36" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    
+                    <h3>Lost on the trail?</h3>
+                    <p>Don't worry, even the best riders sometimes take a wrong turn. Let us help you get back on track.</p>
+                    
+                    <div class="error-actions">
+                        <a href="/" class="button">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    <script src="components/footer.js"></script>
+
+    <style>
+        .error-content {
+            text-align: centre;
+            padding: 30px 0;
+        }
+        
+        .error-icon {
+            margin-bottom: 30px;
+        }
+        
+        .error-content h3 {
+            font-size: 2.5rem;
+            color: var(--brmtb-green);
+            margin-bottom: 10px;
+        }
+        
+        .error-content p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: centre;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .helpful-links {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .helpful-links h4 {
+            color: var(--brmtb-green);
+            margin-bottom: 8px;
+            text-align: centre;
+        }
+        
+        .helpful-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .helpful-links li {
+            margin-bottom: 5px;
+        }
+        
+        .helpful-links a {
+            color: var(--brmtb-black);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .helpful-links a:hover {
+            border-bottom-color: var(--brmtb-yellow);
+        }
+        
+        @media (max-width: 768px) {
+            .error-actions {
+                flex-direction: column;
+                align-items: centre;
+            }
+            
+            .error-content h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>
