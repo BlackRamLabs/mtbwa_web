@@ -277,26 +277,27 @@
         .btn-icon {
             font-size: 1.1rem;
         }
-        
+
         .contact-form {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-        
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
-        
+
         .form-label {
             font-weight: 600;
             color: var(--theme-text-primary);
             font-size: 0.9rem;
         }
-        
-        .form-input, .form-textarea {
+
+        .form-input,
+        .form-textarea {
             padding: 12px 16px;
             border: 2px solid var(--theme-border-color);
             border-radius: 8px;
@@ -306,18 +307,19 @@
             background: var(--theme-bg-primary);
             color: var(--theme-text-primary);
         }
-        
-        .form-input:focus, .form-textarea:focus {
+
+        .form-input:focus,
+        .form-textarea:focus {
             outline: none;
             border-color: var(--highlight-color);
             box-shadow: 0 0 0 3px rgba(255, 179, 0, 0.1);
         }
-        
+
         .form-textarea {
             resize: vertical;
             min-height: 120px;
         }
-        
+
         .form-actions {
             display: flex;
             flex-direction: row;
@@ -332,7 +334,7 @@
             gap: 12px;
             justify-content: center;
         }
-        
+
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -345,20 +347,20 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .cta-button.primary {
             background: var(--highlight-color);
             color: var(--theme-text-primary) !important;
             font-weight: 600;
         }
-        
+
         .cta-button.primary:hover {
             background: var(--highlight-color);
             opacity: 0.9;
             transform: translateY(-2px);
             color: var(--theme-text-primary) !important;
         }
-        
+
         .form-note {
             background: var(--theme-warning-bg);
             border: 1px solid var(--theme-warning-border);
@@ -366,22 +368,22 @@
             padding: 16px;
             margin-bottom: 20px;
         }
-        
+
         .form-note p {
             margin: 0;
             color: var(--theme-warning-text);
             font-size: 0.9rem;
             line-height: 1.5;
         }
-        
+
         .form-note strong {
             color: var(--theme-warning-text-strong);
         }
-        
+
         .checkbox-group {
             margin: 15px 0;
         }
-        
+
         .checkbox-label {
             display: flex;
             align-items: flex-start;
@@ -390,7 +392,7 @@
             font-size: 0.9rem;
             line-height: 1.4;
         }
-        
+
         .checkbox-label input[type="checkbox"] {
             margin: 0;
             margin-top: 2px;
@@ -398,12 +400,12 @@
             height: 18px;
             accent-color: var(--highlight-color);
         }
-        
+
         .checkbox-text {
             color: var(--theme-text-secondary);
             flex: 1;
         }
-        
+
         .area-list {
             list-style: none;
             padding: 0;
@@ -412,30 +414,30 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 8px;
         }
-        
+
         .area-list li {
             padding: 6px 0;
             border-bottom: 1px solid var(--theme-border-color);
             font-size: 0.9rem;
             color: var(--theme-text-primary);
         }
-        
+
         .area-list li:last-child {
             border-bottom: none;
         }
-        
+
         .area-link {
             color: var(--theme-text-primary);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .area-link:hover {
             text-decoration: underline;
             opacity: 0.8;
         }
-        
+
         /* Theme Toggle Button */
         .theme-toggle-btn {
             background: var(--theme-bg-secondary);
@@ -449,28 +451,40 @@
             font-weight: 500;
             margin-left: auto;
         }
-        
+
         .theme-toggle-btn:hover {
             background: var(--theme-bg-tertiary);
             transform: translateY(-1px);
             box-shadow: 0 2px 8px var(--theme-shadow-light);
         }
-        
+
         .theme-toggle-btn:active {
             transform: translateY(0);
         }
 
         /* Global text color defaults that inherit from theme variables */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: var(--theme-text-primary);
         }
 
-        p, span, div, li, td, th {
+        p,
+        span,
+        div,
+        li,
+        td,
+        th {
             color: var(--theme-text-primary);
         }
 
         /* Allow specific overrides for secondary text */
-        .text-secondary, .muted, .subtitle {
+        .text-secondary,
+        .muted,
+        .subtitle {
             color: var(--theme-text-secondary);
         }
 
@@ -558,75 +572,77 @@
             </div>
 
             <div class="content-section" data-aos="fade-up" data-aos-delay="100">
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3 class="info-title">Find Trails</h3>
-                    <p class="info-description">Explore Western Australia's best trails with these premier mapping
-                        platforms:</p>
-                    <div class="resource-grid">
-                        <div class="resource-platform">
-                            <div class="platform-header">
-                                <h4 class="platform-name">Trails WA</h4>
-                                <span class="platform-badge">Official</span>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3 class="info-title">Find Trails</h3>
+                        <p class="info-description">Explore Western Australia's best trails with these premier mapping
+                            platforms:</p>
+                        <div class="resource-grid">
+                            <div class="resource-platform">
+                                <div class="platform-header">
+                                    <h4 class="platform-name">Trails WA</h4>
+                                    <span class="platform-badge">Official</span>
+                                </div>
+                                <div class="platform-actions">
+                                    <a href="https://trailswa.com.au/trails/trail-types/mountain-bike" target="_blank"
+                                        class="action-btn secondary">
+                                        <span class="btn-icon">🌐</span>
+                                        Visit Website
+                                    </a>
+                                    <a href="map/trailswa.html" class="action-btn secondary">
+                                        <span class="btn-icon">🗺️</span>
+                                        Interactive Map
+                                    </a>
+                                </div>
                             </div>
-                            <div class="platform-actions">
-                                <a href="https://trailswa.com.au/trails/trail-types/mountain-bike" target="_blank"
-                                    class="action-btn secondary">
-                                    <span class="btn-icon">🌐</span>
-                                    Visit Website
-                                </a>
-                                <a href="map/trailswa.html" class="action-btn secondary">
-                                    <span class="btn-icon">🗺️</span>
-                                    Interactive Map
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="resource-platform">
-                            <div class="platform-header">
-                                <h4 class="platform-name">Trailforks</h4>
-                                <span class="platform-badge">Community</span>
-                            </div>
-                            <div class="platform-actions">
-                                <a href="https://www.trailforks.com/region/western-australia/" target="_blank"
-                                    class="action-btn secondary">
-                                    <span class="btn-icon">🌐</span>
-                                    Visit Website
-                                </a>
-                                <a href="map/trailforks.html" class="action-btn secondary">
-                                    <span class="btn-icon">🗺️</span>
-                                    Interactive Map
-                                </a>
+                            <div class="resource-platform">
+                                <div class="platform-header">
+                                    <h4 class="platform-name">Trailforks</h4>
+                                    <span class="platform-badge">Community</span>
+                                </div>
+                                <div class="platform-actions">
+                                    <a href="https://www.trailforks.com/region/western-australia/" target="_blank"
+                                        class="action-btn secondary">
+                                        <span class="btn-icon">🌐</span>
+                                        Visit Website
+                                    </a>
+                                    <a href="map/trailforks.html" class="action-btn secondary">
+                                        <span class="btn-icon">🗺️</span>
+                                        Interactive Map
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="info-card">
-                    <h3 class="info-title">Missing Trails & Areas</h3>
-                    <p class="info-description">At last check, these trail areas do not appear in the "official" Trails
-                        WA database.</p>
-                    <ul class="community-list">
-                        <li><a href="https://satterley.com.au/allara/lifestyle/aduro-park/" target="_blank">Aduro
-                                Park</a> - Allara Urban Trails</li>
-                        <li><a href="https://www.melvillecity.com.au/things-to-do/sport-and-recreation/bike-parks"
-                                target="_blank">Dyoondalup | Pt Walter</a> - Melville Urban Trails</li>
-                        <li><a href="https://www.capemountainbikers.asn.au/meelup.html" target="_blank">Meelup /
-                                Dunsborough</a></li>
-                        <li><a href="https://www.mrorca.org.au/trails-middleearth" target="_blank">Middle Earth</a> - NW
-                            of Cowaramup</li>
-                        <li><a href="https://www.lingalongabikepark.com" target="_blank">Linga Longa</a> - Private
-                            property bike park (restricted access)</li>
-                        <li><a href="https://www.york.wa.gov.au/Profiles/york/Assets/ClientData/220224_York_Trail_Network_Concept_A4_Final_Draft_2022_-_Copy_reduced_size__003_.pdf"
-                                target="_blank">Mt Brown</a> - York trail network</li>
-                        <li><a href="https://www.chittering.wa.gov.au/project-bindoon-mountain-bike-adventure-park.aspx"
-                                target="_blank">Bindoon MTB & Adventure Park</a></li>
-                        <li>Wellington Mills ("Welli Mills")</li>
-                    </ul>
-                </div>
+                    <div class="info-card">
+                        <h3 class="info-title">Missing Trails & Areas</h3>
+                        <p class="info-description">At last check, these trail areas do not appear in the "official"
+                            Trails
+                            WA database.</p>
+                        <ul class="community-list">
+                            <li><a href="https://satterley.com.au/allara/lifestyle/aduro-park/" target="_blank">Aduro
+                                    Park</a> - Allara Urban Trails</li>
+                            <li><a href="https://www.melvillecity.com.au/things-to-do/sport-and-recreation/bike-parks"
+                                    target="_blank">Dyoondalup | Pt Walter</a> - Melville Urban Trails</li>
+                            <li><a href="https://www.capemountainbikers.asn.au/meelup.html" target="_blank">Meelup /
+                                    Dunsborough</a></li>
+                            <li><a href="https://www.mrorca.org.au/trails-middleearth" target="_blank">Middle Earth</a>
+                                - NW
+                                of Cowaramup</li>
+                            <li><a href="https://www.lingalongabikepark.com" target="_blank">Linga Longa</a> - Private
+                                property bike park (restricted access)</li>
+                            <li><a href="https://www.york.wa.gov.au/Profiles/york/Assets/ClientData/220224_York_Trail_Network_Concept_A4_Final_Draft_2022_-_Copy_reduced_size__003_.pdf"
+                                    target="_blank">Mt Brown</a> - York trail network</li>
+                            <li><a href="https://www.chittering.wa.gov.au/project-bindoon-mountain-bike-adventure-park.aspx"
+                                    target="_blank">Bindoon MTB & Adventure Park</a></li>
+                            <li>Wellington Mills ("Welli Mills")</li>
+                        </ul>
+                    </div>
 
-                            </div>
-        </div>
+                </div>
+            </div>
 
         </div>
         </div>
@@ -637,7 +653,8 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Trail Safety & Etiquette</h2>
-                <p class="section-subtitle">Important guidelines for responsible trail riding and preserving our MTB community.</p>
+                <p class="section-subtitle">Important guidelines for responsible trail riding and preserving our MTB
+                    community.</p>
             </div>
 
             <div class="content-section" data-aos="fade-up" data-aos-delay="100">
@@ -679,23 +696,57 @@
                             appreciate the access we're given without pushing too far.</li>
                         <li><strong>Major Unsanctioned Areas:</strong>
                             <ul class="area-list">
-                                <li><div class="area-link">The Valley</div></li>
-                                <li><div class="area-link">Mundaring</div></li>
-                                <li><div class="area-link">Byford & Wungong</div></li>
-                                <li><div class="area-link">Manning Park</div></li>
-                                <li><div class="area-link">Darlington</div></li>
-                                <li><div class="area-link">Glen Forrest</div></li>
-                                <li><div class="area-link">Orange Grove</div></li>
-                                <li><div class="area-link">Kelmscott</div></li>
-                                <li><div class="area-link">Roleystone/Bedfordale</div></li>
-                                <li><div class="area-link">Bell's Rapids</div></li>
-                                <li><div class="area-link">Denmark</div></li>
-                                <li><div class="area-link">Exmouth</div></li>
-                                <li><div class="area-link">Karratha</div></li>
-                                <li><div class="area-link">Mt Gunjin unofficial</div></li>
-                                <li><div class="area-link">John Forrest unofficial</div></li>
-                                <li><div class="area-link">Margaret River unofficial</div></li>
-                                <li><div class="area-link">Nannup unofficial</div></li>
+                                <li>
+                                    <div class="area-link">The Valley</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Mundaring</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Byford & Wungong</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Manning Park</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Darlington</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Glen Forrest</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Orange Grove</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Kelmscott</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Roleystone/Bedfordale</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Bell's Rapids</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Denmark</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Exmouth</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Karratha</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Mt Gunjin unofficial</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">John Forrest unofficial</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Margaret River unofficial</div>
+                                </li>
+                                <li>
+                                    <div class="area-link">Nannup unofficial</div>
+                                </li>
                             </ul>
                         </li>
                         <li>These may include some of the best trails WA has to offer, but we strongly advise against
@@ -728,13 +779,13 @@
                     <h3 class="info-title">Generally Closed</h3>
                     <p class="info-description">These locations have hosted races but are not open for public
                         riding:</p>
-                        <ul class="area-list">
-                            <li><a href="#" class="area-link">Three Chillies Farm</a> - Chittering</li>
-                            <li><a href="#" class="area-link">Golden Grove Orchard</a> - Chittering</li>
-                            <li><a href="#" class="area-link">Evedon Lakeside Retreat</a> - Furguson Valley</li>
-                            <li><a href="#" class="area-link">Echidna Park</a> - outside Geraldton</li>
-                            <li><a href="#" class="area-link">Bolinda Vale</a> - Keysbrook</li>
-                        </ul>
+                    <ul class="area-list">
+                        <li><a href="#" class="area-link">Three Chillies Farm</a> - Chittering</li>
+                        <li><a href="#" class="area-link">Golden Grove Orchard</a> - Chittering</li>
+                        <li><a href="#" class="area-link">Evedon Lakeside Retreat</a> - Furguson Valley</li>
+                        <li><a href="#" class="area-link">Echidna Park</a> - outside Geraldton</li>
+                        <li><a href="#" class="area-link">Bolinda Vale</a> - Keysbrook</li>
+                    </ul>
                     </li>
                 </div>
             </div>
@@ -746,46 +797,51 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Ask a Question</h2>
-                <p class="section-subtitle">Have a question about WA trails? Need help finding the perfect ride? Send us a message and we'll get back to you.</p>
+                <p class="section-subtitle">Have a question about WA trails? Need help finding the perfect ride? Send us
+                    a message and we'll get back to you.</p>
             </div>
-            
+
             <div class="content-section" data-aos="fade-up" data-aos-delay="100">
                 <div class="info-card">
                     <h3 class="info-title">Contact Us</h3>
                     <p class="info-description">Fill out the form below and we'll respond as soon as possible:</p>
-                    
+
                     <div class="form-note">
-                        <p><strong>Please note:</strong> We cannot respond to questions about unsanctioned trails or riding areas.</p>
+                        <p><strong>Please note:</strong> We cannot respond to questions about unsanctioned trails or
+                            riding areas.</p>
                     </div>
-                    
-                    <form class="contact-form" action="mailto:trails_info@mtbwa.com.au" method="post" enctype="text/plain">
+
+                    <form class="contact-form" action="mailto:trails_info@mtbwa.com.au" method="post"
+                        enctype="text/plain">
                         <div class="form-group">
                             <label for="name" class="form-label">Name *</label>
                             <input type="text" id="name" name="name" class="form-input" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email" class="form-label">Email *</label>
                             <input type="email" id="email" name="email" class="form-input" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject *</label>
-                            <input type="text" id="subject" name="subject" class="form-input" value="Trail Information Question" required>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                value="Trail Information Question" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message" class="form-label">Message *</label>
                             <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
                         </div>
-                        
+
                         <div class="form-group checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-                                <span class="checkbox-text">Subscribe to MTBWA mailing list for trail updates and community news</span>
+                                <span class="checkbox-text">Subscribe to MTBWA mailing list for trail updates and
+                                    community news</span>
                             </label>
                         </div>
-                        
+
                         <div class="form-actions">
                             <button type="submit" class="action-btn primary">
                                 <span class="btn-icon">📧</span>

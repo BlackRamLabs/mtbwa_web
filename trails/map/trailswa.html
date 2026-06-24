@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,52 +16,54 @@
             overflow: hidden;
             /* Prevents double scrollbars */
         }
-        
+
         .full-page-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 60px); /* Account for header */
+            height: calc(100vh - 60px);
+            /* Account for header */
             background-color: var(--theme-bg-primary);
             font-family: Arial, sans-serif;
             width: 100%;
         }
-        
+
         .trails-wa-iframe {
             width: 100% !important;
             height: 100% !important;
             border: none;
             border-radius: 0;
         }
-        
+
         /* Hide pop-ups and modals from embedded content */
         .trails-wa-iframe::-webkit-scrollbar {
             display: none;
         }
-        
+
         /* Attempt to block common pop-up selectors */
-        .trails-wa-iframe + * {
+        .trails-wa-iframe+* {
             display: none !important;
         }
     </style>
 </head>
+
 <body>
     <div id="navigation-placeholder"></div>
     <script src="../../components/navigation.js"></script>
-    
+
     <div class="full-page-container">
         <!-- TRAILS WA IFRAME START -->
-        <iframe 
+        <iframe
             src="https://trailswa.com.au/trails/explore?sortBy=highest-rated&trailType%5B0%5D=mountain-bike&embed=true&no_popup=true&hide_subscribe=true"
-            class="trails-wa-iframe"
-            title="Trails WA Mountain Bike Trails Map"
+            class="trails-wa-iframe" title="Trails WA Mountain Bike Trails Map"
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
         </iframe>
         <!-- TRAILS WA IFRAME END -->
     </div>
-    
+
     <!-- Footer Component -->
     <div id="footer-placeholder"></div>
     <script src="../../components/footer.js"></script>
 </body>
+
 </html>
