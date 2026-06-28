@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 100" width="350px" height="100px">
-  <rect width="350" height="100" style="" rx="20" ry="20">
+  <rect width="350" height="100" style="fill: none;" rx="20" ry="20">
     <title>Background</title>
   </rect>
   <g>
