@@ -73,8 +73,10 @@ class ThemeManager {
     }
 
     updateLogo() {
-        const isDark = document.documentElement.classList.contains(this.darkThemeClass);
-        const logoPath = isDark ? '/assets/images/MTBWA_logo[light][small].png' : '/assets/images/MTBWA_logo[small].png';
+        // Current logo design is theme agnostic
+        // const isDark = document.documentElement.classList.contains(this.darkThemeClass);
+        // const logoPath = isDark ? '/assets/icons/MTBWA_logo[light].svg' : '/assets/icons/MTBWA_logo.svg';
+        const logoPath = '/assets/icons/MTBWA_logo.svg';
 
         // Update header logo
         const headerLogo = document.querySelector('.logo-image');
