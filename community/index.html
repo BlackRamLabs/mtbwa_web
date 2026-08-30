@@ -98,6 +98,35 @@
             text-decoration: underline;
         }
 
+        /* Closed business — strikethrough text + "Permanently Closed" badge */
+        .closed-business {
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .closed-business a {
+            text-decoration: line-through;
+        }
+
+        .closed-business a:hover {
+            text-decoration: line-through underline;
+        }
+
+        .closed-label {
+            display: inline-block;
+            background-color: #c0392b;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .community-main h1 {
@@ -259,8 +288,6 @@
                             Faffers</a> - Every Thursday night. Unofficial.</li>
                     <li><a href="https://www.instagram.com/wheelbadbitches" target="_blank">Wheel Bad Women</a> - 2nd
                         Sunday morning of the month. Unofficial.</li>
-                    <li><a href="https://www.instagram.com/hillside_cycles" target="_blank">Hillside Cycles</a> -
-                        Monthly-ish Sunday mornings. Shop ride. Open to all.</li>
                     <li><a href="https://burrupmtb.com/social-rides" target="_blank">Burrup MTB Club (Karratha)</a> -
                         Most Wednesday nights & Sunday mornings.</li>
                 </ul>
@@ -342,6 +369,7 @@
                         (Dunsborough)</li>
                     <li><a href="http://www.thehairymarron.com/bikes/hire" target="_blank">The Hairy Marron</a>
                         (Margaret River)</li>
+                    <li><a href="http://www.loosegoose.com.au" target="_blank">Loose Goose</a> (Nannup)</li>
                 </ul>
             </section>
 
@@ -444,7 +472,10 @@
                 <h3 style="color: var(--theme-text-primary); font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">
                     South West Region</h3>
                 <ul class="community-list">
-                    <li><a href="https://www.crankncycles.com.au" target="_blank">Crank'n Cycles</a> - Collie</li>
+                    <li class="closed-business"><a href="https://www.crankncycles.com.au" target="_blank">Crank'n
+                            Cycles</a> - Collie <span class="closed-label">Permanently Closed</span></li>
+                    <li class="closed-business">Three Tanks Cycling - Nannup <span class="closed-label">Permanently
+                            Closed</span></li>
                     <li><a href="https://www.bikesheddunsborough.com.au" target="_blank">The Bike Shed</a> - Dunsborough
                     </li>
                     <li><a href="https://www.cbcycles.com.au" target="_blank">CB Cycles</a> - Australind</li>

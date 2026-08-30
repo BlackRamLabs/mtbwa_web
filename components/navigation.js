@@ -15,7 +15,14 @@ fetch('/components/navigation.html')
 
         // Determine active page based on current path
         navLinks.forEach(link => {
-            const linkPath = new URL(link.href).pathname;
+            const linkUrl = new URL(link.href);
+
+            // Skip external links (different hostname) — they have no active state
+            if (linkUrl.hostname !== window.location.hostname) {
+                return;
+            }
+
+            const linkPath = linkUrl.pathname;
 
             // Normalize current path (remove trailing slash for comparison)
             const normalizedCurrentPath = currentPath.replace(/\/$/, '') || '/';
