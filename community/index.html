@@ -98,6 +98,34 @@
             text-decoration: underline;
         }
 
+        /* Closed business — strikethrough text + "Permanently Closed" badge */
+        .closed-business {
+            opacity: 0.7;
+        }
+
+        .closed-business a {
+            text-decoration: line-through;
+        }
+
+        .closed-business a:hover {
+            text-decoration: line-through underline;
+        }
+
+        .closed-label {
+            display: inline-block;
+            background-color: #c0392b;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .community-main h1 {
