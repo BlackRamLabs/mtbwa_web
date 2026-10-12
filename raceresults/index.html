@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MTB WA Race Results — Every WA mountain bike race result in one place</title>
+    <meta name="description"
+        content="Every Western Australian mountain bike race result in one place — WAGE results, WA gravity enduro, downhill, XCO and club racing. Search your name, track your history. Free app.">
+    <link rel="canonical" href="https://www.mtbwa.com.au/raceresults/">
+    <link rel="stylesheet" href="../components/styles.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/MTBWA_icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mtbwa.com.au/raceresults/">
+    <meta property="og:site_name" content="MTB Western Australia">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:title" content="MTB WA Race Results — Every WA mountain bike race result in one place">
+    <meta property="og:description"
+        content="Every Western Australian mountain bike race result in one place — WAGE results, WA gravity enduro, downhill, XCO and club racing. Search your name, track your history.">
+    <meta property="og:image" content="https://www.mtbwa.com.au/assets/images/race-results/og-image.png">
+    <meta property="og:image:alt" content="MTB WA Race Results app">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MTB WA Race Results — Every WA mountain bike race result in one place">
+    <meta name="twitter:description"
+        content="Every Western Australian mountain bike race result in one place — WAGE results, WA gravity enduro, downhill, XCO and club racing. Search your name, track your history.">
+    <meta name="twitter:image" content="https://www.mtbwa.com.au/assets/images/race-results/og-image.png">
+
+    <!-- Structured data for search engines and answer engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.mtbwa.com.au/#organization",
+                "name": "Mountain Biking Western Australia",
+                "alternateName": "MTBWA",
+                "url": "https://www.mtbwa.com.au/",
+                "logo": "https://www.mtbwa.com.au/assets/icons/MTBWA_logo.svg",
+                "sameAs": [
+                    "https://www.facebook.com/mtbwa",
+                    "https://www.instagram.com/mtbwa",
+                    "https://www.youtube.com/@mtbwa"
+                ]
+            },
+            {
+                "@type": "SportsOrganization",
+                "@id": "https://www.mtbwa.com.au/#sportsorganization",
+                "name": "Mountain Biking Western Australia",
+                "sport": "Mountain Biking",
+                "url": "https://www.mtbwa.com.au/",
+                "areaServed": {
+                    "@type": "State",
+                    "name": "Western Australia"
+                },
+                "parentOrganization": {
+                    "@id": "https://www.mtbwa.com.au/#organization"
+                }
+            },
+            {
+                "@type": "WebApplication",
+                "@id": "https://raceresults.mtbwa.com.au/#webapplication",
+                "name": "MTB WA Race Results",
+                "url": "https://raceresults.mtbwa.com.au/",
+                "applicationCategory": "SportsApplication",
+                "operatingSystem": "Any",
+                "browserRequirements": "Requires JavaScript",
+                "description": "Every Western Australian mountain bike race result in one place — browse races, search rider names, view series standings and full result grids for WAGE, WA gravity enduro, downhill, XCO and club events.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "AUD"
+                },
+                "creator": {
+                    "@id": "https://www.mtbwa.com.au/#organization"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .race-results-main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .race-results-section {
+            background-color: var(--theme-bg-primary);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px var(--theme-shadow-light);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .race-results-section h2 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .race-results-section p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .series-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 32px 24px;
+            border-radius: 16px;
+            background: var(--theme-bg-primary);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 800;
+            color: var(--highlight-color);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--theme-text-secondary);
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .screenshot-card {
+            background: var(--theme-bg-primary);
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px var(--theme-shadow-light);
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--theme-border-color);
+        }
+
+        .screenshot-card figcaption {
+            font-size: 0.875rem;
+            color: var(--theme-text-secondary);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .hero-cta {
+            margin-top: 12px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.9s forwards;
+        }
+
+        .pwa-note {
+            font-size: 0.95rem;
+            color: var(--theme-text-secondary);
+            max-width: 600px;
+            margin: 24px auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .race-results-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation-placeholder"></div>
+    <script src="../components/navigation.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-image-overlay"></div>
+            <img src="/assets/images/coaching_kid_jumping.jpg"
+                alt="Mountain bike rider racing in Western Australia" class="hero-bg-image">
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">Every Western Australian</span>
+                <span class="hero-title-line highlight">mountain bike race result,</span>
+                <span class="hero-title-line">in one place</span>
+            </h1>
+            <p class="hero-subtitle">
+                MTB WA Race Results — WAGE results, WA gravity enduro, downhill, XCO and club racing across
+                Western Australia. Search your name. Find your results.
+            </p>
+            <div class="hero-cta">
+                <a href="https://raceresults.mtbwa.com.au/" class="cta-button secondary" target="_blank"
+                    rel="noopener">Open the app</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-item">
+                    <div class="stat-number">19,000+</div>
+                    <div class="stat-label">Riders</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Races</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80,000+</div>
+                    <div class="stat-label">Results</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Keyword Copy Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Western Australian Mountain Bike Results</h2>
+                <p class="section-subtitle">The complete archive of mountain bike results for Western Australia —
+                    free to browse, no sign-up needed.</p>
+            </div>
+            <div class="race-results-main">
+                <div class="race-results-section" data-aos="fade-up">
+                    <h2>MTB WA race results, all series</h2>
+                    <p>
+                        MTB WA Race Results collects mountain bike results from Western Australian race series into a
+                        single searchable archive — from WA gravity enduro (WAGE results) to downhill, cross-country
+                        and marathon events. Whether you raced at the Goat Farm, Pemberton, Dunsborough, Margaret
+                        River or Karratha, your result is here alongside every other rider's.
+                    </p>
+                    <p>
+                        Browse full race results with categories and stage breakdowns, follow series standings and
+                        championship points, or search a rider name to see their complete race history and personal
+                        bests across every season.
+                    </p>
+                    <div class="series-tags">
+                        <span class="highlight-tag">WA Gravity Enduro (WAGE)</span>
+                        <span class="highlight-tag">WA Downhill</span>
+                        <span class="highlight-tag">XCO State Series</span>
+                        <span class="highlight-tag">Cape to Cape</span>
+                        <span class="highlight-tag">Dwellingup 100</span>
+                        <span class="highlight-tag">Karri Cup</span>
+                        <span class="highlight-tag">Club Racing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Built for WA Racers</h2>
+                <p class="section-subtitle">Find yourself, your mates and your rivals — every result, every season.</p>
+            </div>
+
+            <div class="features-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Search Your Name</h3>
+                    </div>
+                    <p class="feature-description">Type your name and find every result you've ever recorded across
+                        WA race series — no digging through old PDFs and timing sites.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Rider Profiles & History</h3>
+                    </div>
+                    <p class="feature-description">Every rider gets a profile with their full race history, category
+                        results and personal bests — sortable by year and position.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 01-10 0V4z" />
+                                    <path d="M7 6H4a2 2 0 002 4h1M17 6h3a2 2 0 01-2 4h-1" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Series Standings</h3>
+                    </div>
+                    <p class="feature-description">Follow championship points and podium counts across each round of
+                        your series — see exactly where you stand.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3v18h18" />
+                                    <path d="M7 14l4-4 4 4 5-5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Full Result Grids</h3>
+                    </div>
+                    <p class="feature-description">Complete race results with categories, stage-by-stage times and
+                        placing — filterable and sortable, exactly as recorded.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                    <path d="M12 18h.01" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Works Like an App</h3>
+                    </div>
+                    <p class="feature-description">Runs in any browser and installs to your home screen as a PWA —
+                        free, no app store, no account required to browse.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-title-container">
+                        <div class="feature-icon">
+                            <div class="icon-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 010 7.75" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="feature-title">Every WA Series</h3>
+                    </div>
+                    <p class="feature-description">Gravity enduro, downhill, XCO, marathon and club racing — results
+                        from across the state in one place, with more series added over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">See It in Action</h2>
+                <p class="section-subtitle">Real screens from the app — browse races, dig into result grids and
+                    follow rider histories.</p>
+            </div>
+
+            <div class="screenshots-grid" data-aos="fade-up" data-aos-delay="100">
+                <figure class="screenshot-card">
+                    <img src="/assets/images/race-results/home-search.png"
+                        alt="MTB WA Race Results home screen with rider name search">
+                    <figcaption>Search any rider name from the home screen</figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <img src="/assets/images/race-results/race-detail-grid.png"
+                        alt="Race detail results grid showing stage times and placings">
+                    <figcaption>Full result grids with stage times and categories</figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <img src="/assets/images/race-results/rider-profile.png"
+                        alt="Rider profile showing race history and personal bests">
+                    <figcaption>Rider profiles with complete race history</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Organisers Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="race-results-main">
+                <div class="race-results-section" data-aos="fade-up">
+                    <h2>For organisers — publish your club's results</h2>
+                    <p>
+                        Run a WA mountain bike race series? MTB WA Race Results publishes your club's results
+                        alongside the state's biggest events — searchable, permanent and free for your riders.
+                        Organiser tooling for direct uploads is on the way; in the meantime, get in touch to have
+                        your results included.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="mailto:info@mtbwa.com.au" class="cta-button primary">Enquire About Publishing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open App CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Find Your Results</h2>
+                <p class="cta-subtitle">19,000+ riders, 500+ races, 80,000+ results — free, right in your browser.</p>
+                <div class="cta-buttons">
+                    <a href="https://raceresults.mtbwa.com.au/" class="cta-button primary" target="_blank"
+                        rel="noopener">Open the app</a>
+                </div>
+                <p class="pwa-note">Tip: the app works in your browser and can be installed to your home screen like
+                    a native app — look for "Add to Home Screen" on your phone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    <script src="../components/footer.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-bg-image');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+
+</html>
